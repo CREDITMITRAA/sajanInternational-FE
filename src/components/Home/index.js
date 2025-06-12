@@ -2,7 +2,11 @@ import React from 'react';
 import landingBanner from '../../Images/assests/landing-banner.png';
 import landingHeroBackground from '../../Images/assests/landing-hero-banner.png';
 import TouchIcon from '../../Images/assests/touch-icon.png';
-import EmpoweringIcon from '../../Images/assests/empowering-icon.png';
+import EmpoweringIcon from '../../Images/assests/empowering-icon.jpeg';
+import VP_Image1 from '../../Images/assests/image1.png'
+import VP_Image2 from '../../Images/assests/image2.png'
+import VP_Image3 from '../../Images/assests/image3.png'
+import VP_Image4 from '../../Images/assests/image4.png'
 import StepCard from '../StepCard.js';
 import Header from '../Header';
 
@@ -28,28 +32,34 @@ const Home = () => {
           </div>
 
           {/* Foreground Image and Text */}
-          <div className="relative z-10 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left ">
-              <h1 className="text-2xl md:text-5xl font-bold font-roboto mb-4">
-                Welcome To <span>Sajan International</span>
-              </h1>
-              <h2 className="text-2xl font-semibold">
-                Lending <span className="text-orange-500">Starts Here...</span>
-              </h2>
-              <div className="mt-6">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full shadow">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-            <div className="w-full md:w-4/5 flex justify-center md:justify-end">
-              <img
-                src={landingHeroBackground}
-                alt="Hero Illustration"
-                className="w-full rounded-[20px] md:translate-x-4 md:translate-y-4 transition-transform duration-300"
-              />
-            </div>
-          </div>
+         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-8">
+  {/* Text Section — Shows first on mobile */}
+  <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-24">
+    <h1 className="text-[20px] sm:text-[24px] md:text-[24px] lg:text-[38px] text-white font-bold font-roboto capitalize leading-tight mb-4 whitespace-nowrap overflow-hidden text-ellipsis">
+      Welcome to <span>Sajan International</span>
+    </h1>
+    <h2 className="text-xl sm:text-4xl md:text-4xl lg:text-5xl text-white font-bold font-roboto leading-tight">
+      Lending <span className="text-orange-500">Starts Here...</span>
+    </h2>
+    <div className="mt-6">
+      <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full shadow">
+        Contact Us
+      </button>
+    </div>
+  </div>
+
+  {/* Image Section — Appears after text on mobile */}
+  <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-20">
+    <img
+      src={landingHeroBackground}
+      alt="Hero Visual"
+      className="w-full max-w-[650px] lg:max-w-[720px] rounded-[20px] transition-transform duration-300 shadow-2xl"
+    />
+  </div>
+</div>
+
+
+
         </section>
 
         {/* About Section */}
@@ -84,24 +94,27 @@ const Home = () => {
 
 
         {/* Empowering Section */}
-        <section className="w-full px-4 md:px-16 py-12">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <section className="w-full px-4 md:px-8 py-8">
+          <h2 className="text-center text-sm md:text-4xl font-bold text-blue-950 mb-4">
+            Empowering salaried employees{" "}
+            <span className="text-orange-400">with flexible loan solutions!</span>
+          </h2>
+
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-2">
             {/* Left Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 flex p-2">
               <img
                 src={EmpoweringIcon}
                 alt="Illustration"
-                className="rounded-xl w-full h-auto object-contain"
+                className="w-10/12  object-contain rounded-xl"
               />
             </div>
 
+
+
             {/* Right Text Content */}
-            <div className="w-full md:w-2/3">
-              <h2 className="text-sm md:text-4xl font-bold text-blue-950 mb-6">
-                Empowering salaried employees{" "}
-                <span className="text-orange-400">with flexible loan solutions!</span>
-              </h2>
-              <p className="text-gray-800 text-sm leading-relaxed bg-white p-6 rounded-xl">
+            <div className="w-full md:w-4/5">
+              <p className="text-gray-800 text-sm leading-tight bg-white p-6 rounded-xl shadow-2xl">
                 In today’s fast-paced world, financial flexibility for salaried employees is necessary.
                 Our NBFC is created by professionals with personal needs-designed tools to meet the unique
                 needs of working professionals. Whether you need funds for an emergency, a dream vacation,
@@ -213,13 +226,90 @@ const Home = () => {
         </section>
 
         {/* Values & Prinicles Section */}
-        <section className="w-full md:px-16">
-          <div className="max-w-6xl mx-auto text-center">
+        <section className="max-w-6xl mx-auto w-full ">
+          <div className="mx-auto text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
-              Our <span className="text-orange-400">Values and Prinicles</span>
+              Our <span className="text-orange-400">Values and Principles</span>
             </h2>
           </div>
-          {/* write code here */}
+
+          <div className="">
+            {/* 1. Customer-Centric Approach */}
+            <div className="w-full flex">
+              <div className="w-2/5 relative pb-4 pr-4 rounded-xl">
+                <img className="w-full h-full object-cover rounded-xl" src={VP_Image1} alt="Customer-Centric Approach" />
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  rounded-xl z-10">
+                  Customer-Centric Approach
+                </h2>
+              </div>
+              <div className="w-3/5 p-8 bg-white rounded-t-xl rounded-br-xl rounded-br-xl shadow-lg">
+                <h1 className="font-bold text-xl text-orange-400 mb-2">Customer-Centric Approach</h1>
+                <p>
+                  At [NBFC Name], customers are at the heart of everything they do. They prioritize financial needs
+                  by offering easy loan solutions, seamless processes, and transparent terms. Their goal is to build
+                  long-term relationships by providing exceptional service and ensuring a hassle-free borrowing
+                  experience.
+                </p>
+              </div>
+            </div>
+
+            {/* 2. Transparency & Trust */}
+            <div className="w-full flex flex-row-reverse">
+              <div className="w-2/5 relative py-4 pl-4">
+                <img className="w-full h-full object-cover rounded-xl" src={VP_Image2} alt="Transparency & Trust" />
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  rounded-xl z-10">
+                  Transparency & Trust
+                </h2>
+              </div>
+              <div className="w-3/5 p-8 bg-white rounded-l-xl shadow-lg">
+                <h1 className="font-bold text-xl text-orange-400 mb-2">Transparency & Trust</h1>
+                <p className=''>
+                  They believe in complete transparency, ensuring customers have clarity on loan terms, interest rates,
+                  and repayment structures. There are no hidden charges or misleading policies—just honest and
+                  straightforward financial solutions. Trust is the foundation of their business, and they work hard
+                  to maintain it with every transaction.
+                </p>
+              </div>
+            </div>
+
+            {/* 3. Financial Inclusion for All */}
+            <div className="w-full flex">
+              <div className="w-2/5 relative py-4 pr-4">
+                <img className="w-full h-full object-cover rounded-xl" src={VP_Image3} alt="Financial Inclusion for All" />
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl bg-black/0 rounded-xl z-10">
+                  Financial Inclusion for All
+                </h2>
+              </div>
+              <div className="w-3/5 p-8 bg-white rounded-r-xl shadow-lg">
+                <h1 className="font-bold text-xl text-orange-400 mb-2">Financial Inclusion for All</h1>
+                <p>
+                  Their mission is to make financial assistance accessible to everyone, regardless of background or
+                  credit history. They strive to bridge the gap between dreams and reality by providing fair and
+                  inclusive loan opportunities, empowering individuals and businesses to grow without financial
+                  constraints.
+                </p>
+              </div>
+            </div>
+
+            {/* 4. Innovation & Growth */}
+            <div className="w-full flex flex-row-reverse">
+              <div className="w-2/5 relative pt-4 pl-4">
+                <img className="w-full h-full object-cover rounded-xl" src={VP_Image4} alt="Innovation & Growth" />
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl z-10">
+                  Innovation & Growth
+                </h2>
+              </div>
+              <div className="w-3/5 p-8 bg-white rounded-l-xl rounded-br-xl shadow-lg">
+                <h1 className="font-bold text-xl text-orange-400 mb-2">Innovation & Growth</h1>
+                <p>
+                  As they expand, they continuously evolve their technology, services, and offerings to better serve
+                  customers. By embracing innovation, they simplify lending processes, enhance customer experiences,
+                  and ensure that borrowing remains fast, secure, and convenient for everyone who trusts them with
+                  their financial needs.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
