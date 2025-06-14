@@ -12,8 +12,14 @@ const Header = () => {
     <header className="bg-sky-200 py-2 px-4 mt-4 rounded-[70px] max-w-screen-xl mx-auto shadow-md relative z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 ml-4">
+        <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 ml-4">
           <img src={siLogo} alt="SI Logo" className="w-12 h-12 object-contain" />
+          <div className="text-center sm:text-left ml-2 sm:ml-3">
+            <h1 className="text-orange-400 font-serif text-lg sm:text-xl font-bold tracking-wide">
+              Sajan International
+            </h1>
+            {/* <p className="text-blue-950 text-xs sm:text-sm font-light">Empowering Dreams Since 1998</p> */}
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -39,7 +45,7 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="/disclosures"
+            to="/#"
             className="flex items-center gap-1 px-4 py-2 rounded-full hover:bg-blue-950/10 transition"
           >
             <span>Disclosures</span>
@@ -64,9 +70,8 @@ const Header = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sky-100 shadow-lg transform transition-transform duration-300 z-50 ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed top-0 right-0 h-full w-64 bg-sky-100 shadow-lg transform transition-transform duration-300 z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex justify-between items-center px-4 py-4 border-b border-sky-300">
           <img src={siLogo} alt="SI Logo" className="w-10 h-10 object-contain" />

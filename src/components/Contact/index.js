@@ -7,24 +7,34 @@ const Contact = () => {
     return (
         <div className="font-sans bg-gradient-to-roboto from-[#e6f0ff] to-white">
             {/* Hero Section */}
-            <div
-                className="relative h-[300px] md:h-[450px] lg:h-[500px] bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: `url(${ContactHeroImage})` }}
-            >
-                <div className="text-center px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold">
-                        Contact <span className="text-orange-500">Us</span>
+            <section className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] text-white overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={ContactHeroImage}
+                        alt="Background"
+                        className="w-full h-full object-cover object-center"
+                    />
+                </div>
+
+                {/* Fixed Header */}
+                <div className="fixed top-0 left-0 right-0 z-20">
+                    <Header />
+                </div>
+
+                {/* Centered Text */}
+                <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center pt-28 sm:pt-24">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold font-roboto leading-tight drop-shadow-md">
+                        <span className="text-white">Contact </span>
+                        <span className="text-orange-400">Us</span>
                     </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-sm md:text-lg text-left">
-                        At Samicint, we value your feedback and inquiries. Whether you have questions
+                    <p className="mt-5 sm:mt-6 max-w-md sm:max-w-2xl text-base sm:text-lg md:text-xl text-white font-medium sm:text-left leading-relaxed">
+                        At Sajan International, we value your feedback and inquiries. Whether you have questions
                         about our services, need assistance with an existing account, or want to explore
                         new financial opportunities, we are here to help.
                     </p>
                 </div>
-                  <div className="fixed top-0 left-0 right-0 z-20">
-            <Header />
-          </div>
-            </div>
+            </section>
 
             {/* Form and Info Section */}
             <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-10">
@@ -96,10 +106,10 @@ const Contact = () => {
                         <div className="text-sm text-gray-800 space-y-4 w-full">
                             {/* Location */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -116,13 +126,12 @@ const Contact = () => {
                                 </p>
                             </div>
 
-
                             {/* Phone */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -135,17 +144,15 @@ const Contact = () => {
                                 </div>
                                 <p className="text-gray-800 text-sm leading-relaxed">
                                     <p>+91 99519703178 | +91 99519703178</p>
-
                                 </p>
                             </div>
 
-
                             {/* Email */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +169,6 @@ const Contact = () => {
                                     support@creditmittra.in
                                 </p>
                             </div>
-
                         </div>
                     </div>
                 </div>

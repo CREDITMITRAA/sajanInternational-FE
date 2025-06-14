@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import landingBanner from '../../Images/assests/landing-banner.png';
 import landingHeroBackground from '../../Images/assests/landing-hero-banner.png';
 import TouchIcon from '../../Images/assests/touch-icon.png';
@@ -11,6 +12,11 @@ import StepCard from '../StepCard.js';
 import Header from '../Header';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
   return (
     <div className='relative min-h-screen'>
       {/* <Header /> */}
@@ -24,7 +30,6 @@ const Home = () => {
               alt="Background"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           </div>
 
           <div className="fixed top-0 left-0 right-0 z-20">
@@ -32,31 +37,33 @@ const Home = () => {
           </div>
 
           {/* Foreground Image and Text */}
-         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-8">
-  {/* Text Section — Shows first on mobile */}
-  <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-24">
-    <h1 className="text-[20px] sm:text-[24px] md:text-[24px] lg:text-[38px] text-white font-bold font-roboto capitalize leading-tight mb-4 whitespace-nowrap overflow-hidden text-ellipsis">
-      Welcome to <span>Sajan International</span>
-    </h1>
-    <h2 className="text-xl sm:text-4xl md:text-4xl lg:text-5xl text-white font-bold font-roboto leading-tight">
-      Lending <span className="text-orange-500">Starts Here...</span>
-    </h2>
-    <div className="mt-6">
-      <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full shadow">
-        Contact Us
-      </button>
-    </div>
-  </div>
+          <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-8">
+            {/* Text Section — Shows first on mobile */}
+            <div className="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-24">
+              <h1 className="text-[20px] sm:text-[24px] md:text-[24px] lg:text-[38px] text-white font-bold font-roboto capitalize leading-tight mb-4 whitespace-nowrap overflow-hidden text-ellipsis">
+                Welcome to <span>Sajan International</span>
+              </h1>
+              <h2 className="text-xl sm:text-4xl md:text-4xl lg:text-5xl text-white font-bold font-roboto leading-tight">
+                Lending <span className="text-orange-500">Starts Here...</span>
+              </h2>
+              <div className="mt-6">
+                <button
+                  onClick={handleContactClick}
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full shadow">
+                  Contact Us
+                </button>
+              </div>
+            </div>
 
-  {/* Image Section — Appears after text on mobile */}
-  <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-20">
-    <img
-      src={landingHeroBackground}
-      alt="Hero Visual"
-      className="w-full max-w-[650px] lg:max-w-[720px] rounded-[20px] transition-transform duration-300 shadow-2xl"
-    />
-  </div>
-</div>
+            {/* Image Section — Appears after text on mobile */}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-20">
+              <img
+                src={landingHeroBackground}
+                alt="Hero Visual"
+                className="w-full max-w-[650px] lg:max-w-[720px] rounded-[20px] transition-transform duration-300 shadow-2xl"
+              />
+            </div>
+          </div>
 
 
 
@@ -76,7 +83,7 @@ const Home = () => {
                 <p className="text-black text-base font-roboto leading-relaxed">
                   We believe that financial access should be a right, not a privilege. Whether it’s funding a dream business, managing personal expenses, or handling unexpected financial needs, we make borrowing simple, transparent, and accessible to all. Our loan solutions are designed to cater to individuals and businesses, ensuring that financial limitations never stand in the way of growth and success.
                   <br /><br />
-                  Since our inception in [Year], we have been committed to bridging financial gaps and providing opportunities for those who need them the most. With a customer-first approach, state-of-the-art technology, and quick processes, we strive to make lending stress-free. As we continue to grow, our vision is to become a trusted financial platform that empowers millions, helping them achieve their goals and build a financially secure future.
+                  Since our inception in 1980, we have been committed to bridging financial gaps and providing opportunities for those who need them the most. With a customer-first approach, state-of-the-art technology, and quick processes, we strive to make lending stress-free. As we continue to grow, our vision is to become a trusted financial platform that empowers millions, helping them achieve their goals and build a financially secure future.
                 </p>
               </div>
 
@@ -91,103 +98,39 @@ const Home = () => {
           </div>
         </section>
 
-
-
         {/* Empowering Section */}
-        <section className="w-full px-4 md:px-8 py-8">
-          <h2 className="text-center text-sm md:text-4xl font-bold text-blue-950 mb-4">
-            Empowering salaried employees{" "}
-            <span className="text-orange-400">with flexible loan solutions!</span>
-          </h2>
-
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-2">
-            {/* Left Image */}
-            <div className="w-full md:w-1/2 flex p-2">
+        <section className="max-w-6xl mx-auto px-4">
+          <div className="text-center md:text-center mb-6">
+            <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
+              <span className="text-blue-950">Empowering salaried employee</span>
+              <span className="text-orange-400">with flexible loan solutions!</span>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-0">
+            {/* Left Side Image */}
+            <div className="w-full md:w-[500px] h-[280px] md:h-96 shrink-0">
               <img
                 src={EmpoweringIcon}
-                alt="Illustration"
-                className="w-10/12  object-contain rounded-xl"
+                alt="empowering icon"
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
               />
             </div>
 
-
-
-            {/* Right Text Content */}
-            <div className="w-full md:w-4/5">
-              <p className="text-gray-800 text-sm leading-tight bg-white p-6 rounded-xl shadow-2xl">
-                In today’s fast-paced world, financial flexibility for salaried employees is necessary.
-                Our NBFC is created by professionals with personal needs-designed tools to meet the unique
-                needs of working professionals. Whether you need funds for an emergency, a dream vacation,
-                home renovation, or any personal milestone, we ensure you access to solutions with ease and
-                convenience rooted in financial freedom.
+            {/* Right Side Content */}
+            <div className="w-full md:w-[709px] bg-white rounded-[20px] p-5 flex flex-col justify-between h-auto">
+              <p className="text-sm leading-tight bg-white p-2 rounded-lg font-roboto">
+                In today’s fast-paced world, financial flexibility of salaried employees is necessary. Our NBFC is committed to providing instant personal loans designed to meet the unique needs of working professionals. Whether you need funds for an emergency, a dream vacation, home renovation, or any personal requirement, we ensure the easiest borrowing experience because we believe in financial freedom.
                 <br /><br />
-                We understand that time is valuable, especially for corporate and government sector employees
-                with busy schedules. That’s why our loan process is quick, transparent, and convenient — offering
-                competitive rates and simple repayment options. No matter your profession or goals, we make
-                borrowing stress-free.
+                We understand that time is valuable, especially for corporate employees with demanding schedules. That’s why our loan process is quick, transparent, and convenient. With competitive interest rates, flexible repayment options, and zero hidden charges, we make borrowing stress-free.
                 <br /><br />
-                Our aim is to empower professionals by giving them the financial freedom they deserve.
-                It’s our way of saying that for highly aspirational and educated knowledge workers, accessible
-                loans delivered directly to your account are essential. Whether it’s for career growth, education,
-                or managing personal responsibilities — we’ve got you covered.
+                Our goal is to empower professionals by giving them the financial freedom they deserve. No more waiting for lengthy approval processes—our advanced technology ensures seamless loan disbursal directly to your account. Whether it’s for career growth, education, or managing unforeseen expenses, we have you covered.
                 <br /><br />
-                We believe in making dreams real, and we’re constantly innovating to help you achieve your
-                financial aspirations faster. Join the growing number of professionals who enjoy a secure,
-                reliable, and personal loaner — because financial wellbeing matters the most!
+                With our lending solutions, we bring a new way of borrowing to help you achieve your financial aspirations. Experience a smarter, more reliable, and efficient way to access instant personal loans—because financial well-being matters the most!
               </p>
+
             </div>
           </div>
         </section>
-
-        {/* <section className="w-full md:px-16">
-          <div className="max-w-6xl mx-auto"> */}
-        {/* Section Title */}
-        {/* <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950 leading-normal">
-                Empowering salaried employees
-                <span className="text-orange-400"> with flexible loan solutions!</span>
-              </h2>
-            </div> */}
-
-        {/* Image + Content Wrapper */}
-        {/* <div className="w-full h-full flex flex-col md:flex-row items-center bg-blue-500"> */}
-        {/* Image Section with Orange Gradient Background */}
-        {/* <div className="w-2/5 h-128 flex items-center bg-red-400">
-                <img
-                  className="w-full h-full object-cover rounded-[20px]"
-                  src={EmpoweringIcon}
-                  alt="Empowering Loan Image"
-                />
-              </div> */}
-
-        {/* <div className='w-full h-[420px] bg-yellow-400'>
-                <img
-                  className='w-[600px]  p-0 m-0'
-                src={EmpoweringIcon}
-              
-                  alt="Empowering Loan Image"  >
-                </img>
-              </div> */}
-
-
-        {/* Content Section (wider and reduced height) */}
-        {/* <div className="w-full bg-white rounded-[20px] p-2 md:p-8 font-roboto text-gray-600 text-sm font-normal leading-tight h-auto">
-                <p className="mb-4">
-                  In today’s fast-paced world, financial flexibility of salaried employees is necessary. Our NBFC is committed to providing instant personal loans designed to meet the unique needs of working professionals. Whether you need funds for an emergency, a dream vacation, home renovation, or any personal requirement, we ensure the easiest borrowing experience because we believe in financial freedom.
-                </p>
-                <p className="mb-4">
-                  We understand that time is valuable, especially for corporate employees with demanding schedules. That’s why our loan process is quick, transparent, and convenient. With competitive interest rates, flexible repayment options, and zero hidden charges, we make borrowing stress-free.
-                </p>
-                <p className="mb-4">
-                  Our goal is to empower professionals by giving them the financial freedom they deserve. No more waiting for lengthy approval processes—our advanced technology ensures seamless loan disbursal directly to your account. Whether it’s for career growth, education, or managing unforeseen expenses, we have you covered.
-                </p>
-                <p>
-                  With our lending solutions, we bring a new way of borrowing to help you achieve your financial aspirations. Experience a smarter, more reliable, and efficient way to access instant personal loans—because financial well-being matters the most!
-                </p>
-              </div> */}
-        {/* </div>
-          </div>
-        </section> */}
 
         {/* Quick & hassle free*/}
         <section className="w-full md:px-16">
@@ -226,7 +169,7 @@ const Home = () => {
         </section>
 
         {/* Values & Prinicles Section */}
-        <section className="max-w-6xl mx-auto w-full ">
+        <section className="max-w-6xl mx-auto w-full px-4">
           <div className="mx-auto text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
               Our <span className="text-orange-400">Values and Principles</span>
@@ -311,6 +254,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+
       </div>
     </div>
 
