@@ -8,6 +8,7 @@ import { XMarkIcon } from '@heroicons/react/24/solid'; // Tailwind-compatible cl
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
@@ -19,17 +20,17 @@ const Header = () => {
   };
 
   useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="bg-sky-200 py-2 px-4 mt-4 rounded-[70px] max-w-screen-xl mx-auto shadow-md relative z-50">
@@ -57,7 +58,7 @@ const Header = () => {
             Home
           </NavLink>
 
-           {/* About Dropdown */}
+          {/* About Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
@@ -90,8 +91,6 @@ const Header = () => {
               </div>
             )}
           </div>
-
-
           {/* <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -127,16 +126,14 @@ const Header = () => {
       </div>
 
       {/* Mobile Sidebar */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sky-100 shadow-lg transform transition-transform duration-300 z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-      >
+      <div className={`fixed top-0 right-0 h-full w-64 bg-sky-100 shadow-lg transform transition-transform duration-300 z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center px-4 py-4 border-b border-sky-300">
           <img src={siLogo} alt="SI Logo" className="w-10 h-10 object-contain" />
           <button onClick={() => setIsMobileMenuOpen(false)}>
             <XMarkIcon className="w-6 h-6 text-blue-950" />
           </button>
         </div>
+
         <nav className="flex flex-col text-blue-950 font-roboto font-medium px-4 py-6 gap-4">
           <NavLink
             to="/"
@@ -148,15 +145,42 @@ const Header = () => {
           >
             Home
           </NavLink>
-          <NavLink
-            to="/about"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={({ isActive }) =>
-              `py-2 rounded-lg px-3 ${isActive ? 'bg-blue-950/10' : 'hover:bg-blue-950/10'}`
-            }
-          >
-            About Us
-          </NavLink>
+
+          {/* About Us with Dropdown */}
+          <div>
+            <button
+              onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+              className="flex justify-between items-center w-full px-3 py-2 rounded-lg hover:bg-blue-950/10 transition"
+            >
+              <span>About Us</span>
+              <DownArrowIcon className={`w-4 h-4 transform transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {isMobileDropdownOpen && (
+              <div className="pl-4 mt-1 space-y-2">
+                <NavLink
+                  to="/about"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsMobileDropdownOpen(false);
+                  }}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  About Us
+                </NavLink>
+                <a
+                  href="/about#our-partner"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsMobileDropdownOpen(false);
+                  }}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  Our Partner
+                </a>
+              </div>
+            )}
+          </div>
+
           <NavLink
             to="/disclosures"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -166,6 +190,7 @@ const Header = () => {
           >
             Disclosures
           </NavLink>
+
           <NavLink
             to="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -177,6 +202,8 @@ const Header = () => {
           </NavLink>
         </nav>
       </div>
+
+
 
       {/* Background overlay when menu is open */}
       {isMobileMenuOpen && (

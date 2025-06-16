@@ -141,7 +141,6 @@ const Home = () => {
             <div className="text-gray-950 text-xl font-medium font-roboto leading-normal mb-10">
               4-easy steps to get financial freedom
             </div>
-
             {/* Grid for Step Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 px-4 md:px-0 justify-items-center">
               <StepCard
@@ -169,9 +168,9 @@ const Home = () => {
         </section>
 
         {/* Values & Prinicles Section */}
-        <section className="max-w-6xl mx-auto w-full px-4">
+        <section className="max-w-6xl mx-auto w-full px-4 hidden md:block">
           <div className="mx-auto text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
+             <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
               Our <span className="text-orange-400">Values and Principles</span>
             </h2>
           </div>
@@ -188,7 +187,7 @@ const Home = () => {
               <div className="w-3/5 p-8 bg-white rounded-t-xl rounded-br-xl rounded-br-xl shadow-lg">
                 <h1 className="font-bold text-xl text-orange-400 mb-2">Customer-Centric Approach</h1>
                 <p>
-                  At [NBFC Name], customers are at the heart of everything they do. They prioritize financial needs
+                  At Sajan International, customers are at the heart of everything they do. They prioritize financial needs
                   by offering easy loan solutions, seamless processes, and transparent terms. Their goal is to build
                   long-term relationships by providing exceptional service and ensuring a hassle-free borrowing
                   experience.
