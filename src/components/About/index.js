@@ -100,7 +100,7 @@ const About = () => (
 
     {/* Partner Section */}
     <section id="our-partner" className="max-w-6xl mx-auto px-4">
-      <div className="text-center md:text-center mb-4">
+      <div id="our-partner" className="text-center md:text-center mb-4">
         <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
           <span className="text-blue-950">Our</span>
           <span className="text-orange-400">Partner</span>

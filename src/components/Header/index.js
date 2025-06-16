@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import siLogo from "../../Images/assests/si-logo.png";
 import DownArrowIcon from '../icons/DownArrowIcon';
 import MenuIcon from '../icons/MenuIcon';
@@ -7,6 +7,29 @@ import { XMarkIcon } from '@heroicons/react/24/solid'; // Tailwind-compatible cl
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  const handleDropdownNavigate = (path) => {
+    setIsDropdownOpen(false);
+    navigate(path);
+  };
+
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <header className="bg-sky-200 py-2 px-4 mt-4 rounded-[70px] max-w-screen-xl mx-auto shadow-md relative z-50">
@@ -34,7 +57,42 @@ const Header = () => {
             Home
           </NavLink>
 
-          <NavLink
+           {/* About Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={toggleDropdown}
+              className="flex items-center gap-1 px-4 py-2 rounded-full hover:bg-blue-950/10 transition"
+            >
+              <span>About Us</span>
+              <DownArrowIcon />
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute top-12 left-0 z-50 w-44 bg-white rounded-lg shadow-lg text-sm text-gray-800">
+                <ul className="py-2">
+                  <li>
+                    <button
+                      onClick={() => handleDropdownNavigate("/about")}
+                      className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                    >
+                      About Us
+                    </button>
+                  </li>
+                  <li>
+                    <a
+                      href="/about#our-partner"
+                      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      Our Partner
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+
+          {/* <NavLink
             to="/about"
             className={({ isActive }) =>
               `flex items-center gap-1 px-4 py-2 rounded-full transition ${isActive ? 'bg-blue-950/10' : 'hover:bg-blue-950/10'}`
@@ -42,7 +100,7 @@ const Header = () => {
           >
             <span>About Us</span>
             <DownArrowIcon />
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/#"
