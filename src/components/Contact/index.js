@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import ThankYouDialogue from "../DialogBox";
 import ContactHeroImage from "../../Images/assests/contact-hero-image.png";
 import ContactIllustration from "../../Images/assests/contact-illustration.png";
-import Header from "../Header"; // Adjust the import path as necessary
+import { BASE_URL_SAJAN } from "../../api";
+import Header from "../Header";
 
 const Contact = () => {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    const [errors, setErrors] = useState({});
+    const [submitStatus, setSubmitStatus] = useState("");
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setErrors({ ...errors, [e.target.name]: '' });
+    };
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        let newErrors = {};
+        if (!formData.email) newErrors.email = "Email is required";
+        if (!formData.phone) newErrors.phone = "Phone number is required";
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) return;
+
+        try {
+            const response = await axios.post(`${BASE_URL_SAJAN}/api/customer/send-contact-email`, formData);
+            setSubmitStatus("Message sent successfully!");
+            setFormData({ name: '', email: '', phone: '', message: '' });
+        } catch (error) {
+            setSubmitStatus("Failed to send message. Please try again.");
+        }
+    };
+
+
     return (
         <div className="font-sans bg-gradient-to-roboto from-[#e6f0ff] to-white">
             {/* Hero Section */}
@@ -50,28 +90,43 @@ const Contact = () => {
                             Werobotore dedicated to providing you with the best possible experience.
                         </p>
 
-                        <form className="flex flex-col space-y-4">
+                        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Full Name"
+                                value={formData.name}
+                                onChange={handleChange}
                                 className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-[robotorobotoroboto] focus:outline-none"
                             />
                             <input
+                                name="email"
                                 type="email"
                                 placeholder="Email"
-                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-[robotoroboto'] focus:outline-none"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className={`w-full border ${errors.email ? 'border-red-500' : 'border-blue-950/25'} rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none`}
                             />
+                            {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
+
                             <input
+                                name="phone"
                                 type="tel"
                                 placeholder="Phone Number"
-                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                className={`w-full border ${errors.phone ? 'border-red-500' : 'border-blue-950/25'} rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none`}
                             />
+                            {errors.phone && <span className="text-red-500 text-xs">{errors.phone}</span>}
 
                             {/* Updated Textarea */}
                             <div className="w-full h-32 relative bg-blue-950/10 rounded-[5px] outline outline-1 outline-blue-950/25">
                                 <textarea
-                                    className="w-full h-full px-4 pt-8 pb-2 bg-transparent resize-none text-blue-950 text-sm font-normal font-roboto placeholder-blue-950/60 focus:outline-none"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Message"
+                                    className="w-full h-full px-4 pt-8 pb-2 bg-transparent resize-none text-blue-950 text-sm font-normal font-roboto placeholder-blue-950/60 focus:outline-none"
                                 ></textarea>
                             </div>
 
@@ -84,6 +139,14 @@ const Contact = () => {
                                     Submit
                                 </span>
                             </button>
+
+                            {submitStatus && (
+                                <ThankYouDialogue
+                                    isOpen={submitStatus}
+                                    onClose={() => setSubmitStatus(false)}
+                                />
+
+                            )}
                         </form>
                     </div>
 

@@ -64,9 +64,6 @@ const Home = () => {
               />
             </div>
           </div>
-
-
-
         </section>
 
         {/* About Section */}
@@ -100,12 +97,15 @@ const Home = () => {
 
         {/* Empowering Section */}
         <section className="max-w-6xl mx-auto px-4">
-          <div className="text-center md:text-center mb-6">
-            <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
-              <span className="text-blue-950">Empowering salaried employee</span>
-              <span className="text-orange-400">with flexible loan solutions!</span>
-            </div>
+         <div className="text-center mb-6">
+          <div className="inline-flex flex-wrap justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
+            <span className="text-blue-950">Empowering salaried employees</span>
+            <span className="text-orange-400 block md:inline w-full md:w-auto">
+              with flexible loan solutions!
+            </span>
           </div>
+        </div>
+
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-0">
             {/* Left Side Image */}
             <div className="w-full md:w-[500px] h-[280px] md:h-96 shrink-0">
