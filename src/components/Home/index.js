@@ -97,14 +97,14 @@ const Home = () => {
 
         {/* Empowering Section */}
         <section className="max-w-6xl mx-auto px-4">
-         <div className="text-center mb-6">
-          <div className="inline-flex flex-wrap justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
-            <span className="text-blue-950">Empowering salaried employees</span>
-            <span className="text-orange-400 block md:inline w-full md:w-auto">
-              with flexible loan solutions!
-            </span>
+          <div className="text-center mb-6">
+            <div className="inline-flex flex-wrap justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
+              <span className="text-blue-950">Empowering salaried employees</span>
+              <span className="text-orange-400 block md:inline w-full md:w-auto">
+                with flexible loan solutions!
+              </span>
+            </div>
           </div>
-        </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-0">
             {/* Left Side Image */}
@@ -168,23 +168,23 @@ const Home = () => {
         </section>
 
         {/* Values & Prinicles Section */}
-        <section className="max-w-6xl mx-auto w-full px-4 hidden md:block">
+        <section className="max-w-6xl mx-auto w-full p-4">
           <div className="mx-auto text-center mb-8">
-             <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
+            <h2 className="text-3xl md:text-4xl font-bold font-roboto text-blue-950">
               Our <span className="text-orange-400">Values and Principles</span>
             </h2>
           </div>
 
-          <div className="">
+          <div className="md:space-y-0 space-y-4">
             {/* 1. Customer-Centric Approach */}
-            <div className="w-full flex">
-              <div className="w-2/5 relative pb-4 pr-4 rounded-xl">
+            <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-2">
+              <div className="md:w-2/5 relative md:pb-4 md:pr-4 rounded-xl">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image1} alt="Customer-Centric Approach" />
-                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  rounded-xl z-10">
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl z-10">
                   Customer-Centric Approach
                 </h2>
               </div>
-              <div className="w-3/5 p-8 bg-white rounded-t-xl rounded-br-xl rounded-br-xl shadow-lg">
+              <div className="md:w-3/5 p-8 bg-white md:rounded-none md:rounded-t-xl md:rounded-br-xl rounded-xl shadow-lg">
                 <h1 className="font-bold text-xl text-orange-400 mb-2">Customer-Centric Approach</h1>
                 <p>
                   At Sajan International, customers are at the heart of everything they do. They prioritize financial needs
@@ -196,14 +196,14 @@ const Home = () => {
             </div>
 
             {/* 2. Transparency & Trust */}
-            <div className="w-full flex flex-row-reverse">
-              <div className="w-2/5 relative py-4 pl-4">
+            <div className="w-full flex md:flex-row-reverse flex-col md:space-y-0 space-y-2">
+              <div className="md:w-2/5 relative md:py-4 md:pl-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image2} alt="Transparency & Trust" />
                 <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  rounded-xl z-10">
                   Transparency & Trust
                 </h2>
               </div>
-              <div className="w-3/5 p-8 bg-white rounded-l-xl shadow-lg">
+              <div className="md:w-3/5 p-8 bg-white md:rounded-none md:rounded-l-xl rounded-xl shadow-lg">
                 <h1 className="font-bold text-xl text-orange-400 mb-2">Transparency & Trust</h1>
                 <p className=''>
                   They believe in complete transparency, ensuring customers have clarity on loan terms, interest rates,
@@ -215,14 +215,14 @@ const Home = () => {
             </div>
 
             {/* 3. Financial Inclusion for All */}
-            <div className="w-full flex">
-              <div className="w-2/5 relative py-4 pr-4">
+            <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-2">
+              <div className="md:w-2/5 relative md:py-4 md:pr-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image3} alt="Financial Inclusion for All" />
                 <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl bg-black/0 rounded-xl z-10">
                   Financial Inclusion for All
                 </h2>
               </div>
-              <div className="w-3/5 p-8 bg-white rounded-r-xl shadow-lg">
+              <div className="md:w-3/5 p-8 bg-white md:rounded-none md:rounded-r-xl rounded-xl shadow-lg">
                 <h1 className="font-bold text-xl text-orange-400 mb-2">Financial Inclusion for All</h1>
                 <p>
                   Their mission is to make financial assistance accessible to everyone, regardless of background or
@@ -234,14 +234,14 @@ const Home = () => {
             </div>
 
             {/* 4. Innovation & Growth */}
-            <div className="w-full flex flex-row-reverse">
-              <div className="w-2/5 relative pt-4 pl-4">
+            <div className="w-full flex md:flex-row-reverse flex-col md:space-y-0 space-y-2">
+              <div className="md:w-2/5 relative md:pt-4 md:pl-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image4} alt="Innovation & Growth" />
                 <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl z-10">
                   Innovation & Growth
                 </h2>
               </div>
-              <div className="w-3/5 p-8 bg-white rounded-l-xl rounded-br-xl shadow-lg">
+              <div className="md:w-3/5 p-8 bg-white md:rounded-none md:rounded-l-xl md:rounded-br-xl rounded-xl shadow-lg">
                 <h1 className="font-bold text-xl text-orange-400 mb-2">Innovation & Growth</h1>
                 <p>
                   As they expand, they continuously evolve their technology, services, and offerings to better serve
