@@ -3,14 +3,19 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import siLogo from "../../Images/assests/si-logo.png";
 import DownArrowIcon from '../icons/DownArrowIcon';
 import MenuIcon from '../icons/MenuIcon';
-import { XMarkIcon } from '@heroicons/react/24/solid'; // Tailwind-compatible close icon
+import { XMarkIcon } from '@heroicons/react/24/solid';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isDisclosureDropdownOpen, setIsDisclosureDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState({ about: false, disclosures: false });
+
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
+  const disclosureDropdownRef = useRef(null);
+
+  const toggleDisclosureDropdown = () => setIsDisclosureDropdownOpen(!isDisclosureDropdownOpen);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -21,8 +26,12 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        (dropdownRef.current && !dropdownRef.current.contains(event.target)) &&
+        (disclosureDropdownRef.current && !disclosureDropdownRef.current.contains(event.target))
+      ) {
         setIsDropdownOpen(false);
+        setIsDisclosureDropdownOpen(false);
       }
     };
 
@@ -68,12 +77,12 @@ const Header = () => {
               <DownArrowIcon />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-12 left-0 z-50 w-44 bg-white rounded-lg shadow-lg text-sm text-gray-800">
+              <div className="absolute top-12 left-0 z-50 w-44 bg-white rounded-lg shadow-lg text-roboto text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
                 <ul className="py-2">
                   <li>
                     <button
                       onClick={() => handleDropdownNavigate("/about")}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                      className="w-full text-left px-4 py-2 hover:bg-blue-950/10 "
                     >
                       About Us
                     </button>
@@ -81,7 +90,7 @@ const Header = () => {
                   <li>
                     <a
                       href="/about#our-partner"
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Our Partner
@@ -92,22 +101,56 @@ const Header = () => {
             )}
           </div>
           {/* <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `flex items-center gap-1 px-4 py-2 rounded-full transition ${isActive ? 'bg-blue-950/10' : 'hover:bg-blue-950/10'}`
-            }
-          >
-            <span>About Us</span>
-            <DownArrowIcon />
-          </NavLink> */}
-
-          <NavLink
             to="/#"
             className="flex items-center gap-1 px-4 py-2 rounded-full hover:bg-blue-950/10 transition"
           >
             <span>Disclosures</span>
             <DownArrowIcon />
-          </NavLink>
+          </NavLink> */}
+
+          <div className="relative" ref={disclosureDropdownRef}>
+            <button
+              onClick={toggleDisclosureDropdown}
+              className="flex items-center gap-1 px-4 py-2 rounded-full hover:bg-blue-950/10 transition"
+            >
+              <span>Disclosures</span>
+              <DownArrowIcon />
+            </button>
+            {isDisclosureDropdownOpen && (
+              <div className="absolute top-12 left-0 z-50 w-72 text-roboto rounded-lg shadow-lg text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
+                <ul className="py-2">
+                  <li>
+                    <NavLink
+                      to="/privacy-policy"
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
+                      onClick={() => setIsDisclosureDropdownOpen(false)}
+                    >
+                      Privacy Policy
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/customer-rights"
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
+                      onClick={() => setIsDisclosureDropdownOpen(false)}
+                    >
+                      Customer Rights
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/terms-conditions"
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
+                      onClick={() => setIsDisclosureDropdownOpen(false)}
+                    >
+                      Terms and Conditions
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
 
           <NavLink
             to="/contact"
@@ -149,13 +192,14 @@ const Header = () => {
           {/* About Us with Dropdown */}
           <div>
             <button
-              onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+              // onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+              onClick={() => setIsMobileDropdownOpen(prev => ({ ...prev, about: !prev.about }))}
               className="flex justify-between items-center w-full px-3 py-2 rounded-lg hover:bg-blue-950/10 transition"
             >
               <span>About Us</span>
               <DownArrowIcon className={`w-4 h-4 transform transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-            {isMobileDropdownOpen && (
+            {isMobileDropdownOpen?.about && (
               <div className="pl-4 mt-1 space-y-2">
                 <NavLink
                   to="/about"
@@ -181,7 +225,46 @@ const Header = () => {
             )}
           </div>
 
-          <NavLink
+          <div>
+            <button
+              onClick={() =>
+                setIsMobileDropdownOpen(prev => ({ ...prev, disclosures: !prev.disclosures }))}
+              className="flex justify-between items-center w-full px-3 py-2 rounded-lg hover:bg-blue-950/10 transition"
+            >
+              <span>Disclosures</span>
+              <DownArrowIcon
+                className={`w-4 h-4 transform transition-transform ${isMobileDropdownOpen?.disclosures ? 'rotate-180' : ''}`}
+              />
+            </button>
+            {isMobileDropdownOpen?.disclosures && (
+              <div className="pl-4 mt-1 space-y-2">
+                <NavLink
+                  to="/privacy-policy"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  Privacy Policy
+                </NavLink>
+                <NavLink
+                  to="/customer-rights"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  Customer Rights
+                </NavLink>
+                <NavLink
+                  to="/terms-conditions"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  Terms and Conditions
+                </NavLink>
+              </div>
+            )}
+          </div>
+
+
+          {/* <NavLink
             to="/disclosures"
             onClick={() => setIsMobileMenuOpen(false)}
             className={({ isActive }) =>
@@ -189,7 +272,7 @@ const Header = () => {
             }
           >
             Disclosures
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/contact"
@@ -202,8 +285,6 @@ const Header = () => {
           </NavLink>
         </nav>
       </div>
-
-
 
       {/* Background overlay when menu is open */}
       {isMobileMenuOpen && (
