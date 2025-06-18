@@ -45,7 +45,7 @@ const Contact = () => {
 
 
     return (
-        <div className="font-sans bg-gradient-to-roboto from-[#e6f0ff] to-white">
+        <div className="font-roboto bg-gradient-to-roboto from-[#e6f0ff] to-white">
             {/* Hero Section */}
             <section className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] text-white overflow-hidden">
                 {/* Background Image */}
@@ -97,7 +97,7 @@ const Contact = () => {
                                 placeholder="Full Name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-[robotorobotoroboto] focus:outline-none"
+                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none"
                             />
                             <input
                                 name="email"
@@ -135,7 +135,7 @@ const Contact = () => {
                                 type="submit"
                                 className="w-full sm:w-72 px-2.5 py-3 bg-blue-950 rounded-[30px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-900 transition"
                             >
-                                <span className="text-white text-base font-bold font-['robotoroboto]">
+                                <span className="text-white text-base font-bold font-roboto">
                                     Submit
                                 </span>
                             </button>
@@ -169,7 +169,9 @@ const Contact = () => {
                         <div className="text-sm text-gray-800 space-y-4 w-full">
                             {/* Location */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
+                                <div 
+                                    data-svg-wrapper 
+                                    className="w-8 sm:w-12 md:w-8 aspect-square rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
                                         width="20"
                                         height="20"

@@ -3,7 +3,7 @@ import Header from "../../Header";
 
 const PrivacyPolicy = () => {
     return (
-        <div className="text-blue-950 font-sans min-h-screen">
+        <div className="text-blue-950 font-roboto min-h-screen">
             {/* Fixed Header */}
             <div className="fixed top-0 left-0 right-0 z-20">
                 <Header />
@@ -26,7 +26,18 @@ const PrivacyPolicy = () => {
 
                     <p className="text-sm sm:text-base leading-relaxed">
                         The Privacy Policy summarizes all types of information or data (“Information”) that is collected from You by Us, the manner in which it is collected and shared with other third parties as detailed under this Privacy Policy, along with the purpose of collection for each, retention period, the parties that have access and store such Information, and whether provision of such Information is mandatory or optional for availing the lending products being offered by the Company (“Services”) when You use:
-                        <br /> (a) our website <strong>www.SajanInternational.com</strong> (“Website”), and
+                        <br /> (a) our website 
+                               {" "}
+                            <a
+                                href="https://www.sajaninternational.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline hover:text-orange-500 transition"
+                            >
+                                Sajan International
+                            </a>
+                            {" "}
+                            (“Website”), and
                         <br /> (b) other loan sourcing websites and applications in order to avail lending services on which the Company is currently lending or through which it is directly sourcing its customers.
                     </p>
 
@@ -899,9 +910,6 @@ const PrivacyPolicy = () => {
                             <p><strong>Address:</strong></p>
                         </div>
                     </div>
-
-
-
 
                 </section>
             </main>

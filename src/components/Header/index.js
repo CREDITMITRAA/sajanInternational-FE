@@ -45,14 +45,12 @@ const Header = () => {
     <header className="bg-sky-200 py-2 px-4 mt-4 rounded-[70px] max-w-screen-xl mx-auto shadow-md relative z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 ml-4">
-          <img src={siLogo} alt="SI Logo" className="w-12 h-12 object-contain" />
-          <div className="text-center sm:text-left ml-2 sm:ml-3">
-            <h1 className="text-orange-400 font-serif text-lg sm:text-xl font-bold tracking-wide">
-              Sajan International
-            </h1>
-            {/* <p className="text-blue-950 text-xs sm:text-sm font-light">Empowering Dreams Since 1998</p> */}
-          </div>
+        <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 ml-2 md:ml-4">
+          <img 
+            src={siLogo} 
+            alt="SI Logo" 
+             className="w-24 h-10 sm:w-28 sm:h-12 md:w-32 md:h-12 object-contain" 
+            />
         </div>
 
         {/* Desktop Navigation */}
@@ -77,7 +75,7 @@ const Header = () => {
               <DownArrowIcon />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-12 left-0 z-50 w-44 bg-white rounded-lg shadow-lg text-roboto text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
+              <div className="absolute top-12 left-0 z-50 w-44 bg-white rounded-lg shadow-lg font-roboto text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
                 <ul className="py-2">
                   <li>
                     <button
@@ -117,7 +115,7 @@ const Header = () => {
               <DownArrowIcon />
             </button>
             {isDisclosureDropdownOpen && (
-              <div className="absolute top-12 left-0 z-50 w-72 text-roboto rounded-lg shadow-lg text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
+              <div className="absolute top-12 left-0 z-50 w-72 font-roboto rounded-lg shadow-lg text-sm text-gray-800 bg-gradient-to-br from-sky-200 via-white to-sky-200">
                 <ul className="py-2">
                   <li>
                     <NavLink
@@ -171,7 +169,14 @@ const Header = () => {
       {/* Mobile Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-64 bg-sky-100 shadow-lg transform transition-transform duration-300 z-50 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center px-4 py-4 border-b border-sky-300">
-          <img src={siLogo} alt="SI Logo" className="w-10 h-10 object-contain" />
+        <div className="w-10 h-10">
+          <img 
+            src={siLogo} 
+            alt="SI Logo" 
+            className="w-full h-full object-contain scale-125" 
+          />
+        </div>
+
           <button onClick={() => setIsMobileMenuOpen(false)}>
             <XMarkIcon className="w-6 h-6 text-blue-950" />
           </button>

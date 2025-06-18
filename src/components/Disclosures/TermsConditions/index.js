@@ -3,15 +3,15 @@ import Header from "../../Header";
 
 const TermsConditions = () => {
     return (
-        <div className="text-blue-950 font-sans min-h-screen">
+        <div className="text-blue-950 font-roboto min-h-screen">
             {/* Fixed Header */}
             <div className="fixed top-0 left-0 right-0 z-20">
                 <Header />
             </div>
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
                 <section className="max-w-3xl mx-auto space-y-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-orange-500">
+                    <h1 className="text-3xl md:text-4xl font-bold text-orange-500 text-center">
                         Terms and Conditions
                     </h1>
 
@@ -324,7 +324,7 @@ const TermsConditions = () => {
                     <p>Without prejudice to Sajan International’s other rights under these Terms, if you breach these Terms in any way, or if Sajan International suspects that you have breached these Terms in any way, then Sajan International shall be entitled to take such action as it may deem fit.</p>
                 </section>
 
-            </div>
+            </main>
         </div>
     );
 };
