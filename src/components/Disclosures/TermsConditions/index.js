@@ -8,9 +8,8 @@ const TermsConditions = () => {
             <div className="fixed top-0 left-0 right-0 z-20">
                 <Header />
             </div>
-
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
                 <section className="max-w-3xl mx-auto space-y-8">
                     <h1 className="text-3xl md:text-4xl font-bold text-orange-500">
                         Terms and Conditions
@@ -53,10 +52,10 @@ const TermsConditions = () => {
                             These Terms , sets forth the terms and conditions that apply to use of this site
                             {/* (www.Sajaninternational.com)  */}
                             {" "}
-                              <a 
-                                href="https://www.sajaninternational.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://www.sajaninternational.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-blue-600 underline hover:text-orange-500 transition"
                             >
                                 Sajan International
@@ -284,27 +283,27 @@ const TermsConditions = () => {
                     <h2 className="text-2xl font-semibold text-orange-500">Refund & Cancellation Policy</h2>
                     <p>Any additional payment made by You shall be refunded back within 30 days pursuant to the reconciliation of the accounts by Sajan International.</p>
 
-                 <h2 className="text-2xl font-semibold text-orange-500">
-  Disclaimer of Warranty: Limitation of Liability
-</h2>
+                    <h2 className="text-2xl font-semibold text-orange-500">
+                        Disclaimer of Warranty: Limitation of Liability
+                    </h2>
 
-<div className="space-y-4 text-justify leading-relaxed text-blue-950">
-  <p>
-    You expressly agree that use of Website is at your sole risk. Neither Sajan International, its affiliates nor any of their respective employees, agents, third party content providers or licensors warrant that Website will be uninterrupted or error free; nor do they make any warranty as to the results that may be obtained from use of Website, or as to the accuracy, reliability or content of any information, service, or merchandise provided through Website.
-  </p>
+                    <div className="space-y-4 text-justify leading-relaxed text-blue-950">
+                        <p>
+                            You expressly agree that use of Website is at your sole risk. Neither Sajan International, its affiliates nor any of their respective employees, agents, third party content providers or licensors warrant that Website will be uninterrupted or error free; nor do they make any warranty as to the results that may be obtained from use of Website, or as to the accuracy, reliability or content of any information, service, or merchandise provided through Website.
+                        </p>
 
-  <p>
-    Website is provided on an <span className="italic">&quot;As Is&quot;</span> basis without warranties of any kind, either express or implied, including, but not limited to, warranties of title or implied warranties of merchantability or fitness for a particular purpose, other than those warranties which are implied by and incapable of exclusion, restriction or modification under the laws applicable to this agreement.
-  </p>
+                        <p>
+                            Website is provided on an <span className="italic">&quot;As Is&quot;</span> basis without warranties of any kind, either express or implied, including, but not limited to, warranties of title or implied warranties of merchantability or fitness for a particular purpose, other than those warranties which are implied by and incapable of exclusion, restriction or modification under the laws applicable to this agreement.
+                        </p>
 
-  <p>
-    This disclaimer of liability applies to any damages or injury, caused by any failure of performance, error, omission, interruption, deletion, defect, delay in operation or transmission, computer virus, communication line failure, theft or destruction or unauthorized access to, alteration of, or use of record, whether for breach of contract, tortious behaviour, negligence, or under any other cause of action. In no event will Sajan International, or any person or entity involved in creating, producing or distributing Website or the Website software, be liable for any damages, including, without limitation, direct, indirect, incidental, special, consequential or punitive damages arising out of the use of or inability to use Website. You hereby acknowledge that the provisions of this section shall apply to all content on Website.
-  </p>
+                        <p>
+                            This disclaimer of liability applies to any damages or injury, caused by any failure of performance, error, omission, interruption, deletion, defect, delay in operation or transmission, computer virus, communication line failure, theft or destruction or unauthorized access to, alteration of, or use of record, whether for breach of contract, tortious behaviour, negligence, or under any other cause of action. In no event will Sajan International, or any person or entity involved in creating, producing or distributing Website or the Website software, be liable for any damages, including, without limitation, direct, indirect, incidental, special, consequential or punitive damages arising out of the use of or inability to use Website. You hereby acknowledge that the provisions of this section shall apply to all content on Website.
+                        </p>
 
-  <p>
-    In addition to the terms set forth above neither Sajan International, nor its affiliates, information providers or content partners shall be liable regardless of the cause or duration, for any errors, inaccuracies, omissions, or other defects in, or inauthenticity of, the information contained within Website, or for any delay or interruption in the transmission thereof to the user, or for any claims or losses arising therefrom or occasioned thereby. None of the foregoing parties shall be liable for any third-party claims or losses of any nature, including, but not limited to, lost profits, punitive or consequential damages. Sajan International, its affiliates, information providers or content partners shall have no liability for investment decisions based on the information provided. Neither the Company, nor its affiliates, information providers or content partners warrant or guarantee the timeliness, sequence, accuracy or completeness of any information.
-  </p>
-</div>
+                        <p>
+                            In addition to the terms set forth above neither Sajan International, nor its affiliates, information providers or content partners shall be liable regardless of the cause or duration, for any errors, inaccuracies, omissions, or other defects in, or inauthenticity of, the information contained within Website, or for any delay or interruption in the transmission thereof to the user, or for any claims or losses arising therefrom or occasioned thereby. None of the foregoing parties shall be liable for any third-party claims or losses of any nature, including, but not limited to, lost profits, punitive or consequential damages. Sajan International, its affiliates, information providers or content partners shall have no liability for investment decisions based on the information provided. Neither the Company, nor its affiliates, information providers or content partners warrant or guarantee the timeliness, sequence, accuracy or completeness of any information.
+                        </p>
+                    </div>
 
 
                     <h2 className="text-2xl font-semibold text-orange-500">Governing Law and Jurisdiction</h2>
