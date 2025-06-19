@@ -8,13 +8,13 @@ import siLogo from "../../Images/assests/si-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-700 py-10 px-4 sm:px-6 md:px-20 font-['DM_Sans']">
+    <footer className="text-gray-700 py-10 px-4 sm:px-6 md:px-20 font-roboto mt-0 md:mt-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
         {/* Logo & Description */}
         <div className="flex flex-col justify-start">
           <div className="flex items-center space-x-3 mb-4">
-            <img src={siLogo} alt="SI Logo" className="w-14 h-14 object-contain" />
+            <img src={siLogo} alt="SI Logo" className="w-24 h-10 sm:w-28 sm:h-12 md:w-32 md:h-12 object-contain" />
           </div>
           <p className="text-slate-600 text-sm sm:text-base mb-6 max-w-xs">
             Sajan International, your trusted NBFC for quicker and easy loans.
@@ -55,7 +55,7 @@ const Footer = () => {
           <h3 className="text-lg sm:text-xl font-semibold mb-4">Contact Us</h3>
           <p className="text-slate-600 text-sm sm:text-base">Email: support@creditmitra.in</p>
           <p className="text-slate-600 text-sm sm:text-base">Phone: +91 9951703178</p>
-          <p className="text-slate-600 text-sm sm:text-base">Address: 123 Main St, Hyderabad</p>
+          <p className="text-slate-600 text-sm sm:text-base">Address: 4th Floor, B-Wing, Purva Summit, White field Road, Hitech city  Kondapur, Hyderabad, <br />Telangana - 500081</p>
         </div>
       </div>
 

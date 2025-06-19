@@ -49,7 +49,7 @@ const Home = () => {
               <div className="mt-6">
                 <button
                   onClick={handleContactClick}
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full shadow">
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-roboto py-2 px-6 rounded-full shadow">
                   Contact Us
                 </button>
               </div>
@@ -69,7 +69,7 @@ const Home = () => {
         {/* About Section */}
         <section className="w-full md:px-16">
           <div className="text-center md:text-center mb-8">
-            <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
+            <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto leading-tight py-2">
               <span className="text-blue-950">At</span>
               <span className="text-orange-400">Sajan International</span>
             </div>
@@ -117,14 +117,14 @@ const Home = () => {
             </div>
 
             {/* Right Side Content */}
-            <div className="w-full md:w-[709px] bg-white rounded-[20px] p-5 flex flex-col justify-between h-auto">
-              <p className="text-sm leading-tight bg-white p-2 rounded-lg font-roboto">
+            <div className="w-full md:w-[709px] bg-white rounded-[20px] p-4 flex flex-col justify-between h-auto text-left">
+              <p className="text-sm leading-normal bg-white p-2 rounded-lg tracking-wider font-roboto">
                 In today’s fast-paced world, financial flexibility of salaried employees is necessary. Our NBFC is committed to providing instant personal loans designed to meet the unique needs of working professionals. Whether you need funds for an emergency, a dream vacation, home renovation, or any personal requirement, we ensure the easiest borrowing experience because we believe in financial freedom.
-                <br /><br />
+                <br />
                 We understand that time is valuable, especially for corporate employees with demanding schedules. That’s why our loan process is quick, transparent, and convenient. With competitive interest rates, flexible repayment options, and zero hidden charges, we make borrowing stress-free.
-                <br /><br />
+                <br />
                 Our goal is to empower professionals by giving them the financial freedom they deserve. No more waiting for lengthy approval processes—our advanced technology ensures seamless loan disbursal directly to your account. Whether it’s for career growth, education, or managing unforeseen expenses, we have you covered.
-                <br /><br />
+                <br />
                 With our lending solutions, we bring a new way of borrowing to help you achieve your financial aspirations. Experience a smarter, more reliable, and efficient way to access instant personal loans—because financial well-being matters the most!
               </p>
 
@@ -142,7 +142,7 @@ const Home = () => {
               4-easy steps to get financial freedom
             </div>
             {/* Grid for Step Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 px-4 md:px-0 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10 px-4 md:px-0 justify-items-center font-roboto">
               <StepCard
                 step="1"
                 title="Connect With Us"
@@ -180,7 +180,7 @@ const Home = () => {
             <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-2">
               <div className="md:w-2/5 relative md:pb-4 md:pr-4 rounded-xl">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image1} alt="Customer-Centric Approach" />
-                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl font-roboto z-10">
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl font-bold font-roboto z-10">
                   Customer-Centric Approach
                 </h2>
               </div>
@@ -199,7 +199,7 @@ const Home = () => {
             <div className="w-full flex md:flex-row-reverse flex-col md:space-y-0 space-y-2">
               <div className="md:w-2/5 relative md:py-4 md:pl-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image2} alt="Transparency & Trust" />
-                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  rounded-xl z-10 font-roboto">
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl  font-bold rounded-xl z-10 font-roboto">
                   Transparency & Trust
                 </h2>
               </div>
@@ -218,7 +218,7 @@ const Home = () => {
             <div className="w-full flex md:flex-row flex-col md:space-y-0 space-y-2">
               <div className="md:w-2/5 relative md:py-4 md:pr-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image3} alt="Financial Inclusion for All" />
-                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl bg-black/0 rounded-xl z-10 font-roboto">
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl bg-black/0 rounded-xl z-10 font-bold font-roboto">
                   Financial Inclusion for All
                 </h2>
               </div>
@@ -237,7 +237,7 @@ const Home = () => {
             <div className="w-full flex md:flex-row-reverse flex-col md:space-y-0 space-y-2">
               <div className="md:w-2/5 relative md:pt-4 md:pl-4">
                 <img className="w-full h-full object-cover rounded-xl" src={VP_Image4} alt="Innovation & Growth" />
-                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl z-10 font-roboto">
+                <h2 className="absolute inset-0 flex items-center justify-center text-white text-3xl rounded-xl z-10 font-bold font-roboto">
                   Innovation & Growth
                 </h2>
               </div>
