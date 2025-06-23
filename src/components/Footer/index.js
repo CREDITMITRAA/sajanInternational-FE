@@ -20,13 +20,13 @@ const Footer = () => {
             Sajan International, your trusted NBFC for quicker and easy loans.
           </p>
 
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4"> */}
             {/* <FacebookIcon />
             <TwitterIcon />
             <InstagramIcon />
             <YouTubeIcon /> */}
-            <LinkedInIcon />
-          </div>
+            {/* <LinkedInIcon /> */}
+          {/* </div> */}
         </div>
 
         {/* Quick Links */}
@@ -35,18 +35,18 @@ const Footer = () => {
           <ul className="space-y-2 text-slate-600 text-sm sm:text-base">
             <li><a href="/" className="hover:text-orange-500">Home</a></li>
             <li><a href="/about" className="hover:text-orange-500">About Us</a></li>
-            <li><a href="/contact" className="hover:text-orange-500">Contact</a></li>
+            <li><a href="/contact" className="hover:text-orange-500">Contact Us</a></li>
           </ul>
         </div>
 
         {/* Resources */}
         <div>
-          <h3 className="text-lg sm:text-xl font-semibold mb-4">Resources</h3>
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">Disclosures </h3>
           <ul className="space-y-2 text-slate-600 text-sm sm:text-base">
             {/* <li><a href="#" className="hover:text-orange-500">Blog</a></li> */}
             <li><a href="/privacy-policy" className="hover:text-orange-500">Privacy Policy</a></li>
             <li><a href="/terms-conditions" className="hover:text-orange-500">Terms & Conditions</a></li>
-            {/* <li><a href="#" className="hover:text-orange-500">FAQs</a></li> */}
+            <li><a href="/customer-rights" className="hover:text-orange-500">Grievance Redressal</a></li>
           </ul>
         </div>
 

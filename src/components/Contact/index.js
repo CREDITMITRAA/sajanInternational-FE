@@ -68,11 +68,11 @@ const Contact = () => {
                         <span className="text-white">Contact </span>
                         <span className="text-orange-400">Us</span>
                     </h1>
-                    <p className="mt-5 sm:mt-6 max-w-md sm:max-w-2xl text-base sm:text-lg md:text-xl text-white font-medium sm:text-left leading-relaxed">
-                        At Sajan International, we value your feedback and inquiries. Whether you have questions
-                        about our services, need assistance with an existing account, or want to explore
-                        new financial opportunities, we are here to help.
+                    <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
+                        At Sajan International, we value your feedback and inquiries. Whether you have questions about our services,
+                        need assistance with an existing account, or want to explore new financial opportunities, we are here to help.
                     </p>
+
                 </div>
             </section>
 
@@ -169,8 +169,8 @@ const Contact = () => {
                         <div className="text-sm text-gray-800 space-y-4 w-full">
                             {/* Location */}
                             <div className="flex items-start gap-3">
-                                <div 
-                                    data-svg-wrapper 
+                                <div
+                                    data-svg-wrapper
                                     className="w-8 sm:w-12 md:w-8 aspect-square rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
                                         width="20"

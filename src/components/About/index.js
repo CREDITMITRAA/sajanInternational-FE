@@ -27,7 +27,7 @@ const About = () => (
           <span className="text-white">About </span>
           <span className="text-orange-400">Us</span>
         </h1>
-        <p className="mt-5 sm:mt-6 max-w-md sm:max-w-2xl text-base sm:text-lg md:text-xl text-white font-medium text-left leading-relaxed">
+        <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
           Sajan International
           is a trusted financial institution dedicated to providing easy, fast, and transparent loan solutions. Since
           1980, we have been helping individuals achieve their financial goals with seamless access to credit. Our

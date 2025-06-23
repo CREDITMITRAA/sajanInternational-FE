@@ -132,7 +132,7 @@ const Header = () => {
                       className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
                       onClick={() => setIsDisclosureDropdownOpen(false)}
                     >
-                      Customer Rights
+                      Grievance Redressal
                     </NavLink>
                   </li>
                   <li>
