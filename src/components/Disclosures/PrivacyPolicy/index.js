@@ -3,7 +3,7 @@ import Header from "../../Header";
 
 const PrivacyPolicy = () => {
     return (
-        <div className="text-blue-950 font-roboto min-h-screen">
+        <div className="text-[#061B4E] font-roboto min-h-screen">
             {/* Fixed Header */}
             <div className="fixed top-0 left-0 right-0 z-20">
                 <Header />
@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
             {/* Main Content */}
             <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
                 <section className="space-y-8">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-orange-500 text-center">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-[#FF9E28] text-center">
                         Privacy Policy
                     </h1>
 
@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
                         </li>
                     </ul>
 
-                    <h2 className="text-xl sm:text-2xl font-semibold text-orange-500">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28]">
                         1. Use of our website or services
                     </h2>
 
@@ -69,11 +69,11 @@ const PrivacyPolicy = () => {
                     </p>
 
                     {/* Section 2: Collection of Information */}
-                    <h2 className="text-xl sm:text-2xl font-semibold text-orange-500">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28]">
                         2. Collection of information
                     </h2>
 
-                    <h3 className="text-lg font-semibold text-blue-950">
+                    <h3 className="text-lg font-semibold text-[#061B4E]">
                         2.1. Information we collect on our Website or from our LSPs, DLAs and Direct Selling Agents (“DSA(s)”)
                     </h3>
 
@@ -107,8 +107,8 @@ const PrivacyPolicy = () => {
 
                     {/* Scrollable Table */}
                     <div className="overflow-x-auto mt-4">
-                        <table className="min-w-[900px] table-auto border border-gray-400 text-sm sm:text-base">
-                            <thead className="bg-sky-200 text-blue-950 font-semibold">
+                        <table className="min-w-[900px] table-auto border border-gray-400 text-sm sm:text-sm">
+                            <thead className="bg-sky-200 text-[#061B4E] font-semibold">
                                 <tr>
                                     <th className="border border-gray-300 px-3 py-2 text-left">S No.</th>
                                     <th className="border border-gray-300 px-3 py-2 text-left">Information Category</th>
@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
                                     <th className="border border-gray-300 px-3 py-2 text-left">Mandatory/ Optional</th>
                                 </tr>
                             </thead>
-                            <tbody className="text-blue-950">
+                            <tbody className="text-[#061B4E]">
                                 <tr>
                                     <td className="border px-3 py-2">1</td>
                                     <td className="border px-3 py-2">Personal and Demographic Information including but not limited to Mobile, Email, Name, Gender, DOB, Address</td>
@@ -206,7 +206,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     {/* Section 2.2: Collection of Other Non-Personal Information */}
-                    <h3 className="text-lg font-semibold text-blue-950 mt-6">
+                    <h3 className="text-lg font-semibold text-[#061B4E] mt-6">
                         2.2. Collection of other Non-Personal Information
                     </h3>
 
@@ -223,7 +223,7 @@ const PrivacyPolicy = () => {
                     </p>
 
                     {/* Section 2.3: Information from Third Parties */}
-                    <h3 className="text-lg font-semibold text-blue-950 mt-6">
+                    <h3 className="text-lg font-semibold text-[#061B4E] mt-6">
                         2.3. Information we collect about You from third parties:
                     </h3>
 
@@ -233,14 +233,14 @@ const PrivacyPolicy = () => {
 
                     <div className="overflow-x-auto mt-4">
                         <table className="min-w-full text-sm border border-blue-950/20">
-                            <thead className="bg-blue-100 text-blue-950">
+                            <thead className="bg-blue-100 text-[#061B4E]">
                                 <tr>
                                     <th className="border border-blue-950/20 px-4 py-2 text-left font-semibold">S No.</th>
                                     <th className="border border-blue-950/20 px-4 py-2 text-left font-semibold">Third Party</th>
                                     <th className="border border-blue-950/20 px-4 py-2 text-left font-semibold">Type of Information Collected</th>
                                 </tr>
                             </thead>
-                            <tbody className="text-blue-950">
+                            <tbody className="text-[#061B4E]">
                                 <tr>
                                     <td className="border border-blue-950/20 px-4 py-2">1</td>
                                     <td className="border border-blue-950/20 px-4 py-2">UIDAI</td>
@@ -297,7 +297,7 @@ const PrivacyPolicy = () => {
                     </p>
 
                     {/* Section 2.4: Information collected via DLAs */}
-                    <h3 className="text-lg font-semibold text-blue-950 mt-6">
+                    <h3 className="text-lg font-semibold text-[#061B4E] mt-6">
                         2.4. Information collected via DLAs
                     </h3>
 
@@ -307,7 +307,7 @@ const PrivacyPolicy = () => {
 
                     <div className="overflow-x-auto mt-4">
                         <table className="min-w-full text-sm border border-blue-950/20">
-                            <thead className="bg-blue-100 text-blue-950">
+                            <thead className="bg-blue-100 text-[#061B4E]">
                                 <tr>
                                     <th className="border px-4 py-2 text-left">S. No.</th>
                                     <th className="border px-4 py-2 text-left">Information</th>
@@ -315,7 +315,7 @@ const PrivacyPolicy = () => {
                                     <th className="border px-4 py-2 text-left">Mandatory/ Optional</th>
                                 </tr>
                             </thead>
-                            <tbody className="text-blue-950">
+                            <tbody className="text-[#061B4E]">
                                 <tr>
                                     <td className="border px-4 py-2">1</td>
                                     <td className="border px-4 py-2">
@@ -390,14 +390,14 @@ const PrivacyPolicy = () => {
                     </p>
 
                     {/* Section 2.5: Consents */}
-                    <h3 className="text-lg font-semibold text-blue-950 mt-8">
+                    <h3 className="text-lg font-semibold text-[#061B4E] mt-8">
                         2.5. Consents sought as part of rendering the Services (through our Website or LSPs/DLAs)
                     </h3>
 
 
                     <div className="overflow-x-auto rounded-lg shadow">
-                        <table className="min-w-full table-auto border border-blue-200 text-sm md:text-base">
-                            <thead className="bg-blue-100 text-blue-950">
+                        <table className="min-w-full table-auto border border-blue-200 text-sm md:text-sm">
+                            <thead className="bg-blue-100 text-[#061B4E]">
                                 <tr>
                                     <th className="border border-blue-200 px-4 py-2">S. No.</th>
                                     <th className="border border-blue-200 px-4 py-2">Nature of Consent Sought</th>
@@ -549,7 +549,7 @@ const PrivacyPolicy = () => {
 
                     {/* Purpose of collection */}
                     {/* <section className="max-w-6xl mx-auto w-full px-4 py-8 text-blue-950 font-sans"> */}
-                    <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-4">
                         3. Purpose of Collection
                     </h2>
 
@@ -644,7 +644,7 @@ const PrivacyPolicy = () => {
                         </table>
                     </div>
                     {/* Clause 4: STORAGE OF PERSONAL INFORMATION */}
-                    <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-4">
                         4. Storage of Personal Information
                     </h2>
 
@@ -657,7 +657,7 @@ const PrivacyPolicy = () => {
                     </p>
 
                     {/* Clause 5: DISCLOSURE TO THIRD PARTIES */}
-                    <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-4">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-4">
                         5. Disclosure to Third Parties
                     </h2>
 
@@ -729,7 +729,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             6. Data Retention and Deletion
                         </h2>
                         <p className="mb-2 text-justify">
@@ -741,7 +741,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             7. Changes in this Privacy Policy
                         </h2>
                         <p className="mb-2 text-justify">
@@ -750,28 +750,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
-                            6. Data Retention and Deletion
-                        </h2>
-                        <p className="mb-2 text-justify">
-                            <strong>6.1.</strong> We retain Your personal Information in terms of our board approved Record Retention Policy (and in compliance with all regulatory requirements and applicable laws) to provide a seamless experience, to contact You in case of support required and about Your account, to detect, mitigate, prevent, and investigate fraudulent or illegal activities during the course of the Services.
-                        </p>
-                        <p className="mb-2 text-justify">
-                            <strong>6.2.</strong> Any Information retained by us will be subject to Your right to withdraw/deny Your consents as per the terms of this Policy and the retention requirements as per applicable laws only.
-                        </p>
-                    </div>
-
-                    <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
-                            7. Changes in this Privacy Policy
-                        </h2>
-                        <p className="mb-2 text-justify">
-                            <strong>7.1.</strong> We reserve the right to change, modify, add, or remove portions of this Privacy Policy at any time for any reason. In case, any changes are made in the Privacy Policy, we shall update the same on the Platform. Once posted, those changes are effective immediately, unless stated otherwise. We encourage You to periodically review this page for the latest Information on our privacy practices. Continued access or use of the Services constitute Your acceptance of the changes to the Privacy Policy.
-                        </p>
-                    </div>
-
-                    <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             8. Security Precautions
                         </h2>
                         <p className="mb-2 text-justify">
@@ -821,7 +800,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             9. Consent
                         </h2>
                         <p className="mb-2 text-justify">
@@ -833,7 +812,7 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             10. Your Rights
                         </h2>
 
@@ -880,7 +859,7 @@ const PrivacyPolicy = () => {
                         </div>
                     </div>
                     <div className="mb-10">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-orange-500 mb-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-[#FF9E28] mb-2">
                             11. Prohibited Actions
                         </h2>
                         <p className="mb-2 text-justify">

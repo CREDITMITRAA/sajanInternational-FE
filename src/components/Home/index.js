@@ -45,9 +45,9 @@ const Home = () => {
               </h1>
               <h2 className="text-[30px] sm:text-4xl md:text-4xl lg:text-5xl text-white font-bold font-roboto leading-tight">
                 Lending <span className="text-[#FF9E28]">Starts Here
-                     <span className="w-2 h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
-                    <span className="w-2 h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
-                    <span className="w-2 h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
+                     <span className="w-1 h-1 md:w-2 md:h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
+                    <span className="w-1 h-1 md:w-2 md:h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
+                    <span className="w-1 h-1 md:w-2 md:h-2 bg-[#FF9E28] rounded-full inline-block ml-1"></span>
                 </span>
               </h2>
               <div className="mt-6 hidden md:block">
@@ -156,10 +156,10 @@ const Home = () => {
         {/* Quick & hassle free*/}
         <section className="w-full md:px-16">
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-roboto text-[#061B4E] mb-2">
+            <h2 className="text-2xl sm:text-4xl font-bold font-roboto text-[#061B4E] mb-2">
               Quick & Hassle-Free Way to <span className="text-[#FF9E28]">Secure Your Loan</span>
             </h2>
-            <div className="text-xl font-medium font-roboto leading-normal mb-6"
+            <div className="text-base md:text-xl font-medium font-roboto leading-normal mb-6"
               style={{ color: '#051414' }}
               >
               4-easy steps to get financial freedom

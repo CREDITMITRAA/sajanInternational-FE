@@ -3,7 +3,7 @@ import Header from "../../Header";
 
 const TermsConditions = () => {
     return (
-        <div className="text-blue-950 font-roboto min-h-screen">
+        <div className="text-[#061B4E] font-roboto min-h-screen">
             {/* Fixed Header */}
             <div className="fixed top-0 left-0 right-0 z-20">
                 <Header />
@@ -11,7 +11,7 @@ const TermsConditions = () => {
             {/* Main Content */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
                 <section className="max-w-3xl mx-auto space-y-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-orange-500 text-center">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#FF9E28] text-center">
                         Terms and Conditions
                     </h1>
 
@@ -46,7 +46,7 @@ const TermsConditions = () => {
                             products and services shall prevail.
                         </p>
 
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">General</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">General</h2>
 
                         <p>
                             These Terms , sets forth the terms and conditions that apply to use of this site
@@ -56,7 +56,7 @@ const TermsConditions = () => {
                                 href="https://www.sajaninternational.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-600 underline hover:text-orange-500 transition"
+                                className="text-[#061B4E] underline hover:text-orange-500 transition"
                             >
                                 Sajan International
                             </a>
@@ -81,7 +81,7 @@ const TermsConditions = () => {
                             accesses a connection (&#39;Account&#39;) for access to and use of the Website.
                         </p>
 
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Restrictions on use</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Restrictions on use</h2>
                         <p>
                             The Website are owned and operated by Sajan International Private Limited and
                             contains material which is derived, in whole or in part, from material supplied by the
@@ -92,7 +92,7 @@ const TermsConditions = () => {
                             modify, copy, reproduce, republish, upload, post, transmit or distribute in any way
                             any material from the Website including code and software.
                         </p>
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Compliance with the Terms</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Compliance with the Terms</h2>
 
                         <p>
                             By using the Website, you agree to comply with all of the terms and conditions
@@ -103,7 +103,7 @@ const TermsConditions = () => {
                             the confidentiality of your password(s), if any.
                         </p>
 
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Changed Terms</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Changed Terms</h2>
                         <p>
                             The Company shall have the right at any time to change or modify the terms and
                             conditions applicable to Subscriber&#39;s use of the Website, or any part thereof, or to
@@ -115,7 +115,7 @@ const TermsConditions = () => {
                             Subscriber after such notice shall be deemed to constitute acceptance by you of
                             such changes, modifications or additions.
                         </p>
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Use of Information and Materials</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Use of Information and Materials</h2>
                         <p>
                             The content (material, information, data, money market movements, news items,
                             texts, graphics, links etc.) contained on this Website is provided for general
@@ -140,7 +140,7 @@ const TermsConditions = () => {
                             regulator or authority before requesting further information on such products/
                             services.
                         </p>
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Products</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Products</h2>
                         <p>
                             Products and Services are available only at the discretion of Sajan International and
                             its fellow subsidiaries, subject to the individual contractual terms and conditions of
@@ -161,7 +161,7 @@ const TermsConditions = () => {
                             upon the assessment made by Sajan International in individual cases upon receiving
                             necessary information and documents.
                         </p>
-                        <h2 className="text-2xl font-semibold text-orange-500 mt-8">Indicative Loan Terms</h2>
+                        <h2 className="text-2xl font-semibold text-[#FF9E28] mt-8">Indicative Loan Terms</h2>
                         <ul className="list-disc list-inside space-y-2">
                             <li>
                                 <strong>Loan:</strong> The Loan provided by Sajan International shall be the amount stated in
@@ -196,7 +196,7 @@ const TermsConditions = () => {
                         <p className="mt-4">
                             <strong>Problem with a repayment:</strong> Please talk to our partner on following credentials:
                         </p>
-                        <table className="table-auto w-full border-collapse border border-blue-300 mt-4">
+                        <table className="table-auto text-sm w-full border-collapse border border-blue-300 mt-4">
                             <thead>
                                 <tr className="bg-blue-100">
                                     <th className="border border-blue-300 px-4 py-2 text-left">App</th>
@@ -209,7 +209,7 @@ const TermsConditions = () => {
                                     <td className="border border-blue-300 px-4 py-2">Creditmitra</td>
                                     <td className="border border-blue-300 px-4 py-2">9951703178</td>
                                     <td className="border border-blue-300 px-4 py-2">
-                                        <a href="mailto:support@Creditmitra.in" className="text-blue-600 underline">
+                                        <a href="mailto:support@Creditmitra.in" className="text-[#061B4E] underline">
                                             support@Creditmitra.in
                                         </a>
                                     </td>
@@ -223,7 +223,7 @@ const TermsConditions = () => {
                         </p>
                         {/* Equipment */}
                         <div>
-                            <h2 className="text-xl font-semibold text-orange-500 mb-2">Equipment</h2>
+                            <h2 className="text-xl font-semibold text-[#FF9E28] mb-2">Equipment</h2>
                             <p>
                                 You shall be responsible for obtaining and maintaining all telephone, computer hardware and other equipment needed for access to and use of the Website and all charges related thereto.
                             </p>
@@ -231,7 +231,7 @@ const TermsConditions = () => {
 
                         {/* Intellectual Property Rights */}
                         <div>
-                            <h2 className="text-xl font-semibold text-orange-500 mb-2">Intellectual Property Rights</h2>
+                            <h2 className="text-xl font-semibold text-[#FF9E28] mb-2">Intellectual Property Rights</h2>
                             <p>
                                 As long as you respect these terms and conditions for browsing/ using this Website, Sajan International grants you a non-exclusive, non-transferable and revocable license to use this Website.
                             </p>
@@ -245,7 +245,7 @@ const TermsConditions = () => {
 
                         {/* Limited Use */}
                         <div>
-                            <h2 className="text-xl font-semibold text-orange-500 mb-2">Limited Use</h2>
+                            <h2 className="text-xl font-semibold text-[#FF9E28] mb-2">Limited Use</h2>
                             <p>While browsing the Website or using any Services provided herein, you agree that you shall not:</p>
                             <ul className="list-decimal list-inside space-y-1 mt-2 pl-2">
                                 <li>Use Sajan International's Services for spamming or any other illegal purposes;</li>
@@ -268,10 +268,10 @@ const TermsConditions = () => {
                         </div>
 
                     </div>
-                    <h2 className="text-2xl font-semibold text-orange-500">Linked Websites</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Linked Websites</h2>
                     <p>This Website may contain links to other websites of affiliate companies or fellow subsidiaries of Sajan International. This Website also contains links to external websites, having further linked websites, controlled or offered by third parties (non-affiliates of Sajan International), in order to help you find relevant websites, services and/or products which may be of interest to you, quickly and easily. The contents displayed or products / services offered on such linked websites or any quality of the products/ services are not endorsed, verified or monitored by Sajan International or its affiliates...</p>
 
-                    <h2 className="text-2xl font-semibold text-orange-500">Data Protection</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Data Protection</h2>
                     <p>The storage, usage and transmission of all information obtained by it through the Website, shall at all times be in accordance with the Information Technology Act, 2000 read with Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 and all other applicable law. In the event Sajan International obtains any personal data or confidential information pursuant to any transaction/Services, it shall only undertake the processing of Personal Data/Confidential Information reasonably required in connection with the performance of its obligations under the transaction/Services.
                         Sajan International shall at all times have appropriate technical and organisational measures in place to:</p>
                     <ul className="list-decimal list-inside space-y-1 pl-6">
@@ -280,14 +280,14 @@ const TermsConditions = () => {
                         <li>ensure the reliability of its employees/contractor having access to the Personal Data/Confidential Information;</li>
                     </ul>
 
-                    <h2 className="text-2xl font-semibold text-orange-500">Refund & Cancellation Policy</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Refund & Cancellation Policy</h2>
                     <p>Any additional payment made by You shall be refunded back within 30 days pursuant to the reconciliation of the accounts by Sajan International.</p>
 
-                    <h2 className="text-2xl font-semibold text-orange-500">
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">
                         Disclaimer of Warranty: Limitation of Liability
                     </h2>
 
-                    <div className="space-y-4 text-justify leading-relaxed text-blue-950">
+                    <div className="space-y-4 text-justify leading-relaxed text-[#061B4E">
                         <p>
                             You expressly agree that use of Website is at your sole risk. Neither Sajan International, its affiliates nor any of their respective employees, agents, third party content providers or licensors warrant that Website will be uninterrupted or error free; nor do they make any warranty as to the results that may be obtained from use of Website, or as to the accuracy, reliability or content of any information, service, or merchandise provided through Website.
                         </p>
@@ -306,10 +306,10 @@ const TermsConditions = () => {
                     </div>
 
 
-                    <h2 className="text-2xl font-semibold text-orange-500">Governing Law and Jurisdiction</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Governing Law and Jurisdiction</h2>
                     <p>These Terms will be governed by the laws of the India, without regard to its conflict of laws rules. Any dispute arising on account of the Website of usage of any Services, will be exclusively settled by the courts located in Delhi, India.</p>
 
-                    <h2 className="text-2xl font-semibold text-orange-500">Details of Grievance Redressal Officer</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Details of Grievance Redressal Officer</h2>
                     <ul className="list-none space-y-1 pl-0">
                         <p>
                             In accordance with Information Technology Act, 2000 and rules made there under, the name and contact details of the Grievance Officer of Sajan International are as provided below:
@@ -320,7 +320,7 @@ const TermsConditions = () => {
                         <li><strong>Email id:</strong> </li>
                     </ul>
 
-                    <h2 className="text-2xl font-semibold text-orange-500">Breach of the terms</h2>
+                    <h2 className="text-2xl font-semibold text-[#FF9E28">Breach of the terms</h2>
                     <p>Without prejudice to Sajan International’s other rights under these Terms, if you breach these Terms in any way, or if Sajan International suspects that you have breached these Terms in any way, then Sajan International shall be entitled to take such action as it may deem fit.</p>
                 </section>
 
