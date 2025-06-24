@@ -25,7 +25,7 @@ const About = () => (
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center pt-28 sm:pt-24">
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold font-roboto leading-tight drop-shadow-md">
           <span className="text-white">About </span>
-          <span className="text-orange-400">Us</span>
+          <span className="text-[#FF9E28]">Us</span>
         </h1>
         <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
           Sajan International
@@ -39,10 +39,10 @@ const About = () => (
     {/* Vision & Mission */}
     <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-12 space-y-12">
       <div>
-        <h2 className="text-3xl font-bold font-roboto">
-          Our <span className="text-orange-400">Vision</span>
+        <h2 className="text-3xl text-[#061B4E] font-bold font-roboto">
+          Our <span className="text-[#FF9E28]">Vision</span>
         </h2>
-        <p className="mt-4 text-base leading-relaxed">
+        <p className="mt-4 text-base text-[#061B4E] leading-relaxed">
           Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan solutions.
           Since 1980, we have been helping <br /> individuals achieve their financial goals with seamless access to
           credit. Our commitment to innovation and customer satisfaction drives us to make borrowing effortless and
@@ -56,10 +56,10 @@ const About = () => (
         </p>
       </div>
       <div>
-        <h2 className="text-3xl font-bold font-roboto">
-          Our <span className="text-orange-400">Mission</span>
+        <h2 className="text-3xl text-[#061B4E] font-bold font-roboto">
+          Our <span className="text-[#FF9E28]">Mission</span>
         </h2>
-        <p className="mt-4 text-base leading-relaxed">
+        <p className="mt-4 text-base text-[#061B4E] leading-relaxed">
           Our mission is to make borrowing simple, reliable, and inclusive. We are dedicated to offering flexible loan
           options with fair terms, ensuring <br /> that individuals and businesses get the support they need at the right
           time. Through innovation, ethical practices, and customer-first policies, we aim to drive financial growth and
@@ -103,7 +103,7 @@ const About = () => (
       <div id="our-partner" className="text-center md:text-center mb-4">
         <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
           <span className="text-blue-950">Our</span>
-          <span className="text-orange-400">Partner</span>
+          <span className="text-[#FF9E28]">Partner</span>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-0">
@@ -119,10 +119,10 @@ const About = () => (
         {/* Right Side Content */}
         <div className="w-full md:w-[709px] bg-white rounded-[20px] p-5 shadow-md flex flex-col justify-between h-auto">
           <div className="overflow-y-auto md:overflow-hidden">
-            <h2 className="text-orange-400 text-xl font-bold font-roboto mb-2">
+            <h2 className="text-[#FF9E28] text-xl font-bold font-roboto mb-2">
               CreditMitra
             </h2>
-            <p className="text-gray-950 text-sm md:text-base font-roboto leading-relaxed space-y-2">
+            <p className="text-[#051414] text-sm md:text-base font-roboto leading-relaxed space-y-2">
               <span className="block mb-2">
                 CreditMitra is redefining the lending experience for young salaried individuals, offering a seamless and transparent financial solution. With a strong commitment to simplicity and accessibility, CreditMitra connects borrowers with RBI-registered NBFCs, ensuring secure loan disbursement.
               </span>
@@ -139,7 +139,7 @@ const About = () => (
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-4 gap-4">
             <button
               onClick={() => window.open('https://www.creditmitra.in', '_blank')}
-              className="bg-orange-400 text-white font-semibold font-roboto px-6 py-2 rounded-full hover:bg-orange-500 transition"
+              className="bg-[#FF9E28] text-white font-semibold font-roboto px-6 py-2 rounded-full hover:bg-orange-500 transition"
             >
               Apply Now
             </button>
@@ -163,7 +163,7 @@ const About = () => (
                 href="https://www.creditmitra.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-500 underline font-poppins text-sm"
+                className="text-[#009DF6] underline font-poppins text-sm"
               >
                 www.creditmitra.in
               </a>

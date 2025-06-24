@@ -66,7 +66,7 @@ const Contact = () => {
                 <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center pt-28 sm:pt-24">
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold font-roboto leading-tight drop-shadow-md">
                         <span className="text-white">Contact </span>
-                        <span className="text-orange-400">Us</span>
+                        <span className="text-[#FF9E28]">Us</span>
                     </h1>
                     <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
                         At Sajan International, we value your feedback and inquiries. Whether you have questions about our services,
@@ -83,7 +83,7 @@ const Contact = () => {
                     {/* Contact Form */}
                     <div>
                         <h2 className="text-2xl font-bold text-blue-950 mb-2">
-                            Get in <span className="text-orange-500">touch</span>
+                            Get in <span className="text-[#FF9E28]">touch</span>
                         </h2>
                         <p className="text-sm text-gray-600 mb-6">
                             Feel free to connect with us with any questions or queries.
@@ -129,16 +129,17 @@ const Contact = () => {
                                     className="w-full h-full px-4 pt-8 pb-2 bg-transparent resize-none text-blue-950 text-sm font-normal font-roboto placeholder-blue-950/60 focus:outline-none"
                                 ></textarea>
                             </div>
+                            <div className="flex justify-center">
+                                <button
+                                    type="submit"
+                                    className="w-40 sm:w-72 px-2.5 py-3 bg-[#061B4E] rounded-[30px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-900 transition"
+                                >
+                                    <span className="text-white text-base font-bold font-roboto">
+                                        Submit
+                                    </span>
+                                </button>
+                            </div>
 
-                            {/* Figma Styled Submit Button */}
-                            <button
-                                type="submit"
-                                className="w-full sm:w-72 px-2.5 py-3 bg-blue-950 rounded-[30px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-900 transition"
-                            >
-                                <span className="text-white text-base font-bold font-roboto">
-                                    Submit
-                                </span>
-                            </button>
 
                             {submitStatus && (
                                 <ThankYouDialogue
@@ -207,7 +208,7 @@ const Contact = () => {
                                         />
                                     </svg>
                                 </div>
-                                <p className="text-gray-800 text-sm leading-relaxed">
+                                <p className="text-gray-800 text-sm leading-relaxed mt-2">
                                     <p>+91 99519703178 | +91 99519703178</p>
                                 </p>
                             </div>
@@ -230,7 +231,7 @@ const Contact = () => {
                                         />
                                     </svg>
                                 </div>
-                                <p className="text-gray-800 text-sm leading-relaxed">
+                                <p className="text-gray-800 text-sm leading-relaxed mt-2">
                                     support@creditmittra.in
                                 </p>
                             </div>
