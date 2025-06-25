@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutImage from '../../Images/assests/about-us-hero.png';
+import AboutImage from '../../Images/assests/about-us.webp';
 import CreditMitra from '../../Images/assests/creditmitra.png';
 import Header from '../Header';
 
@@ -59,7 +59,7 @@ const About = () => (
         <h2 className="text-3xl text-[#061B4E] font-bold font-roboto">
           Our <span className="text-[#FF9E28]">Mission</span>
         </h2>
-        <p className="mt-4 text-base text-[#061B4E] leading-relaxed">
+        <p id="our-partner" className="mt-4 text-base text-[#061B4E] leading-relaxed">
           Our mission is to make borrowing simple, reliable, and inclusive. We are dedicated to offering flexible loan
           options with fair terms, ensuring <br /> that individuals and businesses get the support they need at the right
           time. Through innovation, ethical practices, and customer-first policies, we aim to drive financial growth and
@@ -99,8 +99,8 @@ const About = () => (
       </div> */}
 
     {/* Partner Section */}
-    <section id="our-partner" className="max-w-6xl mx-auto px-4">
-      <div id="our-partner" className="text-center md:text-center mb-4">
+    <section className="max-w-6xl mx-auto px-4">
+      <div className="text-center md:text-center mb-4">
         <div className="inline-flex justify-center md:justify-center space-x-2 text-3xl sm:text-4xl font-bold font-roboto">
           <span className="text-blue-950">Our</span>
           <span className="text-[#FF9E28]">Partner</span>

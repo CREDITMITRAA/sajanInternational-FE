@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ThankYouDialogue from "../DialogBox";
-import ContactHeroImage from "../../Images/assests/contact-hero-image.png";
+import ContactHeroImage from "../../Images/assests/contact-us.webp";
 import ContactIllustration from "../../Images/assests/contact-illustration.png";
 import { BASE_URL_SAJAN } from "../../api";
 import Header from "../Header";

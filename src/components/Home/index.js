@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import landingBanner from '../../Images/assests/landing-banner.png';
-import landingHeroBackground from '../../Images/assests/landing-hero-banner.png';
+import landingBanner from '../../Images/assests/landing-banner.webp';
+import landingHeroBackground from '../../Images/assests/landing-hero-banner.webp';
 import TouchIcon from '../../Images/assests/touch-icon.png';
 import EmpoweringIcon from '../../Images/assests/empowering-icon.png';
 import VP_Image1 from '../../Images/assests/image1.png'
