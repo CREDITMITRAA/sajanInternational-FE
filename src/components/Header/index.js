@@ -205,7 +205,7 @@ const Header = () => {
               <DownArrowIcon className={`w-4 h-4 transform transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             {isMobileDropdownOpen?.about && (
-              <div className="pl-4 mt-1 space-y-2">
+              <div className="mt-1 space-y-2">
                 <NavLink
                   to="/about"
                   onClick={() => {
@@ -242,7 +242,7 @@ const Header = () => {
               />
             </button>
             {isMobileDropdownOpen?.disclosures && (
-              <div className="pl-4 mt-1 space-y-2">
+              <div className="mt-1 space-y-2">
                 <NavLink
                   to="/privacy-policy"
                   onClick={() => setIsMobileMenuOpen(false)}
