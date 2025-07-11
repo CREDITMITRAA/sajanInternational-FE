@@ -18,7 +18,7 @@ const Home = () => {
     navigate('/contact');
   };
   return (
-    <div className='relative min-h-screen'>
+    <div className="relative min-h-screen">
       {/* <Header /> */}
       <div className="space-y-16">
         {/* Hero Section */}
@@ -279,7 +279,6 @@ const Home = () => {
 
       </div>
     </div>
-
   );
 };
 

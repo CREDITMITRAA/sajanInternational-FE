@@ -144,6 +144,15 @@ const Header = () => {
                       Terms and Conditions
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      to="/fair-practice-code"
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-950/10 "
+                      onClick={() => setIsDisclosureDropdownOpen(false)}
+                    >
+                      Fair Practices Code
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             )}

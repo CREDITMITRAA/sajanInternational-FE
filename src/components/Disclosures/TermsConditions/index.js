@@ -314,10 +314,10 @@ const TermsConditions = () => {
                         <p>
                             In accordance with Information Technology Act, 2000 and rules made there under, the name and contact details of the Grievance Officer of Sajan International are as provided below:
                         </p>
-                        <li><strong>Name:</strong> </li>
-                        <li><strong>Address:</strong> </li>
-                        <li><strong>Phone No:</strong> </li>
-                        <li><strong>Email id:</strong> </li>
+                        <li><strong>Name:</strong> <span>Rasheed Mohammad</span></li>
+                        <li><strong>Address:</strong> <span>Office No-903, 9th Floor, D-Mall, Netaji Subhash Place, Pitampura, North West, New Delhi, Delhi, India, 110034</span></li>
+                        <li><strong>Phone No:</strong> <span>+91 9951703178</span></li>
+                        <li><strong>Email id:</strong> <span>grievance@sajaninternational.com</span></li>
                     </ul>
 
                     <h2 className="text-2xl font-semibold text-[#FF9E28">Breach of the terms</h2>

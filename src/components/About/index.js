@@ -43,13 +43,7 @@ const About = () => (
           Our <span className="text-[#FF9E28]">Vision</span>
         </h2>
         <p className="mt-4 text-base text-[#061B4E] leading-relaxed">
-          Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan solutions.
-          Since 1980, we have been helping <br /> individuals achieve their financial goals with seamless access to
-          credit. Our commitment to innovation and customer satisfaction drives us to make borrowing effortless and
-          stress-free.Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan
-          solutions. Since 1980, we have been helping individuals achieve their financial goals with seamless access to
-          credit. Our commitment to innovation and customer satisfaction drives us to make borrowing effortless and
-          stress-free.Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan
+          Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan
           solutions. Since 1980, we have been helping individuals achieve their financial goals with seamless access to
           credit. Our commitment to innovation and customer satisfaction drives us to make borrowing effortless and
           stress-free.
