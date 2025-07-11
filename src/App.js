@@ -9,6 +9,7 @@ import CustomerRights from './components/Disclosures/CustomerRights';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import RootLayout from './components/Layout';
+import FairPracticesCode from './components/Disclosures/FairPracticeCode';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/customer-rights" element={<CustomerRights />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fair-practice-code" element={<FairPracticesCode />} />
         </Routes>
         <Footer />
       </RootLayout>
