@@ -1,30 +1,80 @@
-import React from "react";
-import ContactHeroImage from "../../Images/assests/contact-hero-image.png";
+import React, { useState } from "react";
+import axios from "axios";
+import ThankYouDialogue from "../DialogBox";
+import ContactHeroImage from "../../Images/assests/contact-us.webp";
 import ContactIllustration from "../../Images/assests/contact-illustration.png";
-import Header from "../Header"; // Adjust the import path as necessary
+import { BASE_URL_SAJAN } from "../../api";
+import Header from "../Header";
 
 const Contact = () => {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    const [errors, setErrors] = useState({});
+    const [submitStatus, setSubmitStatus] = useState("");
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setErrors({ ...errors, [e.target.name]: '' });
+    };
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        let newErrors = {};
+        if (!formData.email) newErrors.email = "Email is required";
+        if (!formData.phone) newErrors.phone = "Phone number is required";
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length > 0) return;
+
+        try {
+            const response = await axios.post(`${BASE_URL_SAJAN}/api/customer/send-contact-email`, formData);
+            setSubmitStatus("Message sent successfully!");
+            setFormData({ name: '', email: '', phone: '', message: '' });
+        } catch (error) {
+            setSubmitStatus("Failed to send message. Please try again.");
+        }
+    };
+
+
     return (
-        <div className="font-sans bg-gradient-to-roboto from-[#e6f0ff] to-white">
+        <div className="font-roboto bg-gradient-to-roboto from-[#e6f0ff] to-white">
             {/* Hero Section */}
-            <div
-                className="relative h-[300px] md:h-[450px] lg:h-[500px] bg-cover bg-center flex items-center justify-center text-white"
-                style={{ backgroundImage: `url(${ContactHeroImage})` }}
-            >
-                <div className="text-center px-4">
-                    <h1 className="text-3xl md:text-5xl font-bold">
-                        Contact <span className="text-orange-500">Us</span>
-                    </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-sm md:text-lg text-left">
-                        At Samicint, we value your feedback and inquiries. Whether you have questions
-                        about our services, need assistance with an existing account, or want to explore
-                        new financial opportunities, we are here to help.
-                    </p>
+            <section className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] text-white overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={ContactHeroImage}
+                        alt="Background"
+                        className="w-full h-full object-cover object-center"
+                    />
                 </div>
-                  <div className="fixed top-0 left-0 right-0 z-20">
-            <Header />
-          </div>
-            </div>
+
+                {/* Fixed Header */}
+                <div className="fixed top-0 left-0 right-0 z-20">
+                    <Header />
+                </div>
+
+                {/* Centered Text */}
+                <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center pt-28 sm:pt-24">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold font-roboto leading-tight drop-shadow-md">
+                        <span className="text-white">Contact </span>
+                        <span className="text-[#FF9E28]">Us</span>
+                    </h1>
+                    <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
+                        At Sajan International, we value your feedback and inquiries. Whether you have questions about our services,
+                        need assistance with an existing account, or want to explore new financial opportunities, we are here to help.
+                    </p>
+
+                </div>
+            </section>
 
             {/* Form and Info Section */}
             <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-10">
@@ -33,47 +83,71 @@ const Contact = () => {
                     {/* Contact Form */}
                     <div>
                         <h2 className="text-2xl font-bold text-blue-950 mb-2">
-                            Get in <span className="text-orange-500">touch</span>
+                            Get in <span className="text-[#FF9E28]">touch</span>
                         </h2>
                         <p className="text-sm text-gray-600 mb-6">
                             Feel free to connect with us with any questions or queries.
                             Werobotore dedicated to providing you with the best possible experience.
                         </p>
 
-                        <form className="flex flex-col space-y-4">
+                        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Full Name"
-                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-[robotorobotoroboto] focus:outline-none"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-[robotoroboto'] focus:outline-none"
-                            />
-                            <input
-                                type="tel"
-                                placeholder="Phone Number"
+                                value={formData.name}
+                                onChange={handleChange}
                                 className="w-full border border-blue-950/25 rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none"
                             />
+                            <input
+                                name="email"
+                                type="email"
+                                placeholder="Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className={`w-full border ${errors.email ? 'border-red-500' : 'border-blue-950/25'} rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none`}
+                            />
+                            {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
+
+                            <input
+                                name="phone"
+                                type="tel"
+                                placeholder="Phone Number"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                className={`w-full border ${errors.phone ? 'border-red-500' : 'border-blue-950/25'} rounded-[5px] px-4 py-3 bg-blue-950/10 text-sm placeholder-blue-950/60 font-roboto focus:outline-none`}
+                            />
+                            {errors.phone && <span className="text-red-500 text-xs">{errors.phone}</span>}
 
                             {/* Updated Textarea */}
                             <div className="w-full h-32 relative bg-blue-950/10 rounded-[5px] outline outline-1 outline-blue-950/25">
                                 <textarea
-                                    className="w-full h-full px-4 pt-8 pb-2 bg-transparent resize-none text-blue-950 text-sm font-normal font-roboto placeholder-blue-950/60 focus:outline-none"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Message"
+                                    className="w-full h-full px-4 pt-8 pb-2 bg-transparent resize-none text-blue-950 text-sm font-normal font-roboto placeholder-blue-950/60 focus:outline-none"
                                 ></textarea>
                             </div>
+                            <div className="flex justify-center">
+                                <button
+                                    type="submit"
+                                    className="w-40 sm:w-72 px-2.5 py-3 bg-[#061B4E] rounded-[30px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-900 transition"
+                                >
+                                    <span className="text-white text-base font-bold font-roboto">
+                                        Submit
+                                    </span>
+                                </button>
+                            </div>
 
-                            {/* Figma Styled Submit Button */}
-                            <button
-                                type="submit"
-                                className="w-full sm:w-72 px-2.5 py-3 bg-blue-950 rounded-[30px] inline-flex justify-center items-center gap-2.5 hover:bg-blue-900 transition"
-                            >
-                                <span className="text-white text-base font-bold font-['robotoroboto]">
-                                    Submit
-                                </span>
-                            </button>
+
+                            {submitStatus && (
+                                <ThankYouDialogue
+                                    isOpen={submitStatus}
+                                    onClose={() => setSubmitStatus(false)}
+                                />
+
+                            )}
                         </form>
                     </div>
 
@@ -96,10 +170,12 @@ const Contact = () => {
                         <div className="text-sm text-gray-800 space-y-4 w-full">
                             {/* Location */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div
+                                    data-svg-wrapper
+                                    className="w-8 sm:w-12 md:w-8 aspect-square rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -116,13 +192,12 @@ const Contact = () => {
                                 </p>
                             </div>
 
-
                             {/* Phone */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -133,19 +208,17 @@ const Contact = () => {
                                         />
                                     </svg>
                                 </div>
-                                <p className="text-gray-800 text-sm leading-relaxed">
+                                <p className="text-gray-800 text-sm leading-relaxed mt-2">
                                     <p>+91 99519703178 | +91 99519703178</p>
-
                                 </p>
                             </div>
 
-
                             {/* Email */}
                             <div className="flex items-start gap-3">
-                                <div data-svg-wrapper className="relative mt-1">
+                                <div data-svg-wrapper className="w-8 h-8 rounded-full border border-black bg-white flex items-center justify-center mt-1">
                                     <svg
-                                        width="24"
-                                        height="24"
+                                        width="20"
+                                        height="20"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -158,11 +231,10 @@ const Contact = () => {
                                         />
                                     </svg>
                                 </div>
-                                <p className="text-gray-800 text-sm leading-relaxed">
+                                <p className="text-gray-800 text-sm leading-relaxed mt-2">
                                     support@creditmittra.in
                                 </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
