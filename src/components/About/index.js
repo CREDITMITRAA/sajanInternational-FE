@@ -30,7 +30,7 @@ const About = () => (
         <p className="w-full sm:w-[663px] text-left sm:text-center text-white text-base sm:text-lg font-medium font-roboto leading-relaxed mt-2 md:mt-5">
           Sajan International
           is a trusted financial institution dedicated to providing easy, fast, and transparent loan solutions. Since
-          1980, we have been helping individuals achieve their financial goals with seamless access to credit. Our
+          2000, we have been helping individuals achieve their financial goals with seamless access to credit. Our
           commitment to innovation and customer satisfaction drives us to make borrowing effortless and stress-free.
         </p>
       </div>
@@ -44,7 +44,7 @@ const About = () => (
         </h2>
         <p className="mt-4 text-base text-[#061B4E] leading-relaxed">
           Sajan International is a trusted financial institution dedicated to providing easy, fast, and transparent loan
-          solutions. Since 1980, we have been helping individuals achieve their financial goals with seamless access to
+          solutions. Since 2000, we have been helping individuals achieve their financial goals with seamless access to
           credit. Our commitment to innovation and customer satisfaction drives us to make borrowing effortless and
           stress-free.
         </p>
@@ -54,13 +54,7 @@ const About = () => (
           Our <span className="text-[#FF9E28]">Mission</span>
         </h2>
         <p id="our-partner" className="mt-4 text-base text-[#061B4E] leading-relaxed">
-          Our mission is to make borrowing simple, reliable, and inclusive. We are dedicated to offering flexible loan
-          options with fair terms, ensuring <br /> that individuals and businesses get the support they need at the right
-          time. Through innovation, ethical practices, and customer-first policies, we aim to drive financial growth and
-          independence for millions. Our mission is to make borrowing simple, reliable, and inclusive. We are dedicated to
-          offering flexible loan options with fair terms, ensuring that individuals and businesses get the support they need
-          at the right time. Through innovation, ethical practices, and customer-first policies, we aim to drive financial
-          growth and independence for millions. Our mission is to make borrowing simple, reliable, and inclusive. We are
+          Our mission is to make borrowing simple, reliable, and inclusive. We are
           dedicated to offering flexible loan options with fair terms, ensuring that individuals and businesses get the
           support they need at the right time. Through innovation, ethical practices, and customer-first policies, we aim to
           drive financial growth and independence for millions.

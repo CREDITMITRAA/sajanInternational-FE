@@ -53,9 +53,9 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="text-lg sm:text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-slate-600 text-sm sm:text-base">Email: support@creditmitra.in</p>
+          <p className="text-slate-600 text-sm sm:text-base">Email: info@sajaninternational.com</p>
           <p className="text-slate-600 text-sm sm:text-base">Phone: +91 9951703178</p>
-          <p className="text-slate-600 text-sm sm:text-base">Address: 4th Floor, B-Wing, Purva Summit, White field Road, Hitech city  Kondapur, Hyderabad, <br />Telangana - 500081</p>
+          <p className="text-slate-600 text-sm sm:text-base">Address: Office No-903, 9th Floor, D-Mall, Netaji Subhash Place, Pitampura, North West, New Delhi, Delhi, India, 110034</p>
         </div>
       </div>
 
