@@ -273,6 +273,13 @@ const Header = () => {
                 >
                   Terms and Conditions
                 </NavLink>
+                <NavLink
+                  to="/fair-practice-code"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-2 px-3 rounded-lg hover:bg-blue-950/10 text-sm"
+                >
+                  Fair Practices Code
+                </NavLink>
               </div>
             )}
           </div>
